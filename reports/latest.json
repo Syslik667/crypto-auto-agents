@@ -1,0 +1,503 @@
+{
+  "time_utc": "2026-11-21 22:42",
+  "market": [
+    {
+      "name": "Bitcoin",
+      "symbol": "BTC",
+      "usd": 60115.0,
+      "change24h": 1.75
+    },
+    {
+      "name": "Ethereum",
+      "symbol": "ETH",
+      "usd": 1679.01,
+      "change24h": 3.47
+    },
+    {
+      "name": "Solana",
+      "symbol": "SOL",
+      "usd": 70.04,
+      "change24h": 1.17
+    }
+  ],
+  "new": [
+    {
+      "id": "9695c828fe1f49e78f",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "GetOn Early Access Waitlist",
+      "url": "https://airdropalert.com/airdrops/geton-waitlist/",
+      "published": "Sat, 21 Nov 2026 13:30:03 +0000",
+      "summary": "GetOn is a global financial app combining multi-currency accounts, international transfers, crypto and everyday spending. The GetOn Early Access campaign lets participants collect Points and Passport stamps through quests and referrals to climb the waitlist ahead of the app's launch. 🎟️ GetOn Early Access: Earn Points & Passport Stamps Participants earn 500 welcome Points after joining, with additional Points available through social quests, dail",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "36bdcb035aeda26d07",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Variational On-Chain Trader Rewards",
+      "url": "https://airdropalert.com/airdrops/variational-on-chain-trader-rewards/",
+      "published": "Fri, 20 Nov 2026 17:57:36 +0000",
+      "summary": "Variational has identified the 10,000 most active onchain traders , excluding market makers and existing platform users, for the Variational On-Chain Trader Rewards campaign. 🔥 Eligible wallets have been assigned up to 3,000 Points , which can be unlocked through trading milestones on Omni, while qualifying referrers can receive up to 15,000 USDC plus 300 Points . The Points also count toward the $ VAR genesis airdrop , with 32% of the total toke",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "8770eae4b55a045557",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Tzero Airdrop",
+      "url": "https://airdropalert.com/airdrops/tzero-testnet/",
+      "published": "Thu, 19 Nov 2026 20:17:08 +0000",
+      "summary": "Tzero is the first token launchpad built for Zero Chain, the new blockchain developed by LayerZero, branded as \"The Last Blockchain\". Ahead of the upcoming mainnet launch, Tzero has launched a Pre-flight Points program on testnet, allocating 11% of the total $T0 supply to airdrop rewards: 5% for Season 0 and the remaining 6% for future mainnet seasons. 🪂 Tzero Airdrop: Earn Pre-flight Points to Qualify for $T0 Rewards During Season 0, participant",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "b2466e67df07759e77",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Daejin Loyalty Program",
+      "url": "https://airdropalert.com/airdrops/daejin/",
+      "published": "Thu, 19 Nov 2026 17:32:23 +0000",
+      "summary": "Daejin is a Web3 social gaming platform where people can create prediction markets, build and play AI-powered games, and connect with creator communities. Through the Daejin Points program, participants earn Jin Points from daily check-ins, quests, referrals and market activity, win cryptocurrency rewards, with a potential airdrop on the horizon. 🪂 Earn Jin Points & Crypto Rewards Daejin has launched a loyalty campaign, allowing participants to e",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "6481fff311eca5bec2",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Panther Protocol Airdrop",
+      "url": "https://airdropalert.com/airdrops/panther-protocol/",
+      "published": "Wed, 18 Nov 2026 17:53:01 +0000",
+      "summary": "Panther Protocol is a confidentiality layer for decentralized finance that uses zero-knowledge technology to enable shielded asset deposits, private transfers and token swaps. Users can earn Panther Reward Points (PRPs) through deposits, shielded balances and transactions, then redeem their points for $ZKP tokens through Panther Protocol Rewards. 🪂 Earn Panther Points & Redeem for $ZKP Tokens Panther rewards users for contributing to the protocol",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "4bc3e762f4d458aa1a",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Antseed Airdrop",
+      "url": "https://airdropalert.com/airdrops/antseed/",
+      "published": "Tue, 17 Nov 2026 23:03:25 +0000",
+      "summary": "Antseed is building an open, peer-to-peer AI marketplace where users can access AI models from competing providers, compare prices and connect familiar tools like Codex and Claude Code. The Antseed Airdrop lets users earn Points through qualifying AI usage and receive weekly $ANTS token rewards, with further opportunities through staking and providing AI services. 🪂 Antseed Airdrop: Earn Weekly $ANTS Rewards The Antseed Points program rewards qua",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "b66de66c5f0cdafb22",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Decentralized Intelligence Airdrop",
+      "url": "https://airdropalert.com/airdrops/decentralized-intelligence/",
+      "published": "Tue, 17 Nov 2026 15:34:57 +0000",
+      "summary": "DI is building a user-owned financial AI Agent network that combines market intelligence, AI-powered research and quantitative strategies across crypto and U.S. stocks. Ahead of its product launches and planned $DI token, participants can earn DI Points through daily check-ins and social tasks, with potential eligibility for its upcoming Genesis NFT collection and $DI airdrop. 🪂 Earn DI Points Ahead of $DI TGE The Points campaign combines daily c",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "209b65d715f6f35111",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Aura Protocol Airdrop",
+      "url": "https://airdropalert.com/airdrops/aura-protocol-testnet/",
+      "published": "Mon, 16 Nov 2026 16:26:19 +0000",
+      "summary": "Aura Protocol is a decentralized launchpad for robotics, mechatronics and real-world asset projects. The Aura Airdrop allocates 150 million $AURA tokens to eligible participants who earn Points through transactions, staking and community activities on the LitVM LiteForge testnet. 🪂 Earn Points toward $AURA Airdrop Rewards Aura Protocol runs Airdrop ZERO , an incentivized campaign allocating 150 million $AURA, representing 30% of the total token s",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "79559c1b4426d6d08c",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "RISEx Airdrop",
+      "url": "https://airdropalert.com/airdrops/risex/",
+      "published": "Mon, 16 Nov 2026 14:04:40 +0000",
+      "summary": "RISEx is a decentralized exchange for high-speed onchain trading across cryptocurrencies, stocks, ETFs and commodities, operating on its own high-performance Ethereum Layer 2, RISE Chain. Through its Ignite rewards program, trading, liquidity provision and referrals generate RISEx Points, which may qualify participants for a future airdrop after the $RISE TGE. 🪂 Earn RISE Points and USDC Rewards The RISEx Ignite rewards program distributes 200,00",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "506c099da6a334ecdf",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "GoMining │ Bitcoin Mining",
+      "url": "https://airdropalert.com/airdrops/gomining-bitcoin-mining-platform/",
+      "published": "Sat, 14 Nov 2026 17:23:41 +0000",
+      "summary": "GoMining is a Bitcoin mining ecosystem that connects digital miners to real mining infrastructure, allowing participants to earn $BTC without owning or maintaining physical equipment. GoMining Rewards include a free Bonus Miner, task-based mining upgrades, $GOMINING tokens, referral commissions, Simple Earn, mining-power cashback and prizes from Raffles & Contests. ⛏️ Bitcoin Mining: Earn $BTC & $GOMINING GoMining provides several earning opportu",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "546e7d8ae166267c72",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Kleos Airdrop",
+      "url": "https://airdropalert.com/airdrops/kleos-elysium-launchpad/",
+      "published": "Fri, 13 Nov 2026 14:39:17 +0000",
+      "summary": "Kleos is a token launchpad on Elysium where trading, daily check-ins and eligible token holdings earn Points toward a clan-based competition. The Kleos Airdrop allocates 30 million $KLEOS tokens to the top 15 clans, with individual rewards determined by each member's contribution. 🪂 Kleos Airdrop: Earn $KLEOS Through Clan Wars The Clan Wars campaign launched on November 7, 2026, with 30 million $KLEOS, representing 3% of the token supply , alloca",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "afa8a3475bad3a5b6c",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Kraken Black Friday Bonus",
+      "url": "https://airdropalert.com/airdrops/kraken-black-friday-bonus/",
+      "published": "Fri, 13 Nov 2026 00:28:43 +0000",
+      "summary": "Kraken has launched the Kraken Black Friday Bonus, offering up to $100 in $BTC for depositing fiat and completing trading milestones between November 12 and December 1, 2026. 🪂 Kraken Black Friday Bonus: Earn Up to $100 in BTC 🎁 The Black Friday Deposit & Trade Bonus features four trading milestones, with Bitcoin rewards increasing as participants reach higher trading volumes. To qualify, participants must enroll in the promotion, deposit at leas",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "5453432e220b4fa819",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Loopscale Airdrop",
+      "url": "https://airdropalert.com/airdrops/loopscale/",
+      "published": "Thu, 12 Nov 2026 13:47:50 +0000",
+      "summary": "Loopscale is a Solana-based lending protocol that enables users to lend assets, borrow against a wide range of collateral, and access fixed-rate loans and leveraged yield strategies. The Loopscale Points program adds rewards for DeFi activity, referrals and free social tasks. Following its merger with Orca, Loopscale announced plans to convert Points, potentially leading to an airdrop, with reward details, token allocations and eligibility yet to",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "503d6cca23558fd77c",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Arch Prime",
+      "url": "https://airdropalert.com/airdrops/arch-prime-waitlist/",
+      "published": "Thu, 12 Nov 2026 00:25:01 +0000",
+      "summary": "Arch Prime is an upcoming full-stack onchain financial platform where users can earn yield, trade and borrow against Bitcoin , Ethereum , Solana and other assets without selling them. The Arch Prime Waitlist is now open, allowing participants to invite friends, climb the rankings and earn referral Points. Arch Network previously announced plans for a $ARCH token and airdrop, although the connection to the new Points program remains unconfirmed. 🪂",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "10142c6e7f9f1c8e18",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Ascend Points Program",
+      "url": "https://airdropalert.com/airdrops/ascend-elysium-launchpad/",
+      "published": "Wed, 11 Nov 2026 14:30:30 +0000",
+      "summary": "Ascend is an onchain token launchpad and trading platform on the Elysium HyperEVM Layer 2, where users can trade tokens, provide liquidity, stake $HYPE and launch memecoins. Ascend Rewards offer trading-fee distributions for eligible token holders, staking opportunities and $KNTQ Points competitions, with additional incentives planned. Rather than issuing its own token, Ascend uses $ KNTQ and $ HYPE in its protocol revenue model . The protocol al",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "58a545b8cbabcdbadc",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Kalos.fun Airdrop",
+      "url": "https://airdropalert.com/airdrops/kalos-fun/",
+      "published": "Tue, 10 Nov 2026 23:44:01 +0000",
+      "summary": "Kalos is an onchain trading platform on Elysium where users can trade everything from memecoins and other tokens to NFTs, swap assets and provide liquidity. The Kalos Airdrop rewards early users with Points that determine future $KALOS allocations, alongside weekly revenue rewards and referral commissions. 🪂 Kalos Airdrop: Earn Points & Weekly Rewards Kalos distributes 1 million Points daily across four reward categories: • Trading (400,000 Point",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "23858948d7565f8f91",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Raycash Points Program",
+      "url": "https://airdropalert.com/airdrops/raycash/",
+      "published": "Tue, 10 Nov 2026 12:31:50 +0000",
+      "summary": "Raycash is a stablecoin app powered by Zama, letting people hold, grow and spend stablecoins privately while keeping their balances and payment amounts encrypted. Early supporters can earn Raycash Points through social quests and referrals, with potential future benefits yet TBA. 🪂 Earn Raycash Points & Get Early Access Raycash runs a free rewards program allowing participants to earn 1,000 RP through six social quests , plus 120 RP per eligible ",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "f97897e33188678c74",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Elysium Mainnet Airdrops",
+      "url": "https://airdropalert.com/airdrops/elysium-mainnet/",
+      "published": "Mon, 09 Nov 2026 22:28:30 +0000",
+      "summary": "Elysium is a high-performance Layer 2 built by Kinetiq to accelerate Hyperliquid with faster, more efficient onchain execution. The Elysium mainnet launch on November 9, brings new opportunities across the ecosystem, including incentive programs, token rewards and potential airdrops. 🪂 Elysium Ecosystem Rewards & Potential Airdrops Kinetiq has reserved part of the $KNTQ supply for protocol growth and ecosystem rewards, leaving room for future inc",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "80459b42d4e0bfc20a",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "OnRe Finance Airdrop",
+      "url": "https://airdropalert.com/airdrops/onre-finance/",
+      "published": "Sun, 08 Nov 2026 22:46:15 +0000",
+      "summary": "OnRe is a Solana-based on-chain reinsurance platform bringing real-world insurance returns to DeFi through $ONyc, a yield-bearing asset that can be held or deployed across lending, liquidity and other yield strategies. Alongside these opportunities, the OnRe Points program rewards ONyc holdings and DeFi activity, with accumulated Points potentially qualifying for a future airdrop. 💸 Earn ONyc Yield, DeFi Income and Points 🪂 Holding $ ONyc provide",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "444b55595285e4f630",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Zoi Network Airdrop",
+      "url": "https://airdropalert.com/airdrops/zoi-network/",
+      "published": "Sat, 07 Nov 2026 20:25:45 +0000",
+      "summary": "Zoi Network is a cryptocurrency payment network developing Bluetooth transactions that work without internet access, with the Zoi Airdrop rewarding early participants through mobile Syncs, daily streaks and referrals. Accumulated $ZOI rewards are set to migrate to mainnet at TGE. 🪂 Zoi Airdrop: Earn $ZOI With Free Mobile Mining The Zoi Network app rewards participants with 10 $ZOI per Sync , available every four hours, while daily streaks increas",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    }
+  ],
+  "latest": [
+    {
+      "id": "9695c828fe1f49e78f",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "GetOn Early Access Waitlist",
+      "url": "https://airdropalert.com/airdrops/geton-waitlist/",
+      "published": "Sat, 21 Nov 2026 13:30:03 +0000",
+      "summary": "GetOn is a global financial app combining multi-currency accounts, international transfers, crypto and everyday spending. The GetOn Early Access campaign lets participants collect Points and Passport stamps through quests and referrals to climb the waitlist ahead of the app's launch. 🎟️ GetOn Early Access: Earn Points & Passport Stamps Participants earn 500 welcome Points after joining, with additional Points available through social quests, dail",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "36bdcb035aeda26d07",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Variational On-Chain Trader Rewards",
+      "url": "https://airdropalert.com/airdrops/variational-on-chain-trader-rewards/",
+      "published": "Fri, 20 Nov 2026 17:57:36 +0000",
+      "summary": "Variational has identified the 10,000 most active onchain traders , excluding market makers and existing platform users, for the Variational On-Chain Trader Rewards campaign. 🔥 Eligible wallets have been assigned up to 3,000 Points , which can be unlocked through trading milestones on Omni, while qualifying referrers can receive up to 15,000 USDC plus 300 Points . The Points also count toward the $ VAR genesis airdrop , with 32% of the total toke",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "8770eae4b55a045557",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Tzero Airdrop",
+      "url": "https://airdropalert.com/airdrops/tzero-testnet/",
+      "published": "Thu, 19 Nov 2026 20:17:08 +0000",
+      "summary": "Tzero is the first token launchpad built for Zero Chain, the new blockchain developed by LayerZero, branded as \"The Last Blockchain\". Ahead of the upcoming mainnet launch, Tzero has launched a Pre-flight Points program on testnet, allocating 11% of the total $T0 supply to airdrop rewards: 5% for Season 0 and the remaining 6% for future mainnet seasons. 🪂 Tzero Airdrop: Earn Pre-flight Points to Qualify for $T0 Rewards During Season 0, participant",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "b2466e67df07759e77",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Daejin Loyalty Program",
+      "url": "https://airdropalert.com/airdrops/daejin/",
+      "published": "Thu, 19 Nov 2026 17:32:23 +0000",
+      "summary": "Daejin is a Web3 social gaming platform where people can create prediction markets, build and play AI-powered games, and connect with creator communities. Through the Daejin Points program, participants earn Jin Points from daily check-ins, quests, referrals and market activity, win cryptocurrency rewards, with a potential airdrop on the horizon. 🪂 Earn Jin Points & Crypto Rewards Daejin has launched a loyalty campaign, allowing participants to e",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "6481fff311eca5bec2",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Panther Protocol Airdrop",
+      "url": "https://airdropalert.com/airdrops/panther-protocol/",
+      "published": "Wed, 18 Nov 2026 17:53:01 +0000",
+      "summary": "Panther Protocol is a confidentiality layer for decentralized finance that uses zero-knowledge technology to enable shielded asset deposits, private transfers and token swaps. Users can earn Panther Reward Points (PRPs) through deposits, shielded balances and transactions, then redeem their points for $ZKP tokens through Panther Protocol Rewards. 🪂 Earn Panther Points & Redeem for $ZKP Tokens Panther rewards users for contributing to the protocol",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "4bc3e762f4d458aa1a",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Antseed Airdrop",
+      "url": "https://airdropalert.com/airdrops/antseed/",
+      "published": "Tue, 17 Nov 2026 23:03:25 +0000",
+      "summary": "Antseed is building an open, peer-to-peer AI marketplace where users can access AI models from competing providers, compare prices and connect familiar tools like Codex and Claude Code. The Antseed Airdrop lets users earn Points through qualifying AI usage and receive weekly $ANTS token rewards, with further opportunities through staking and providing AI services. 🪂 Antseed Airdrop: Earn Weekly $ANTS Rewards The Antseed Points program rewards qua",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "b66de66c5f0cdafb22",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Decentralized Intelligence Airdrop",
+      "url": "https://airdropalert.com/airdrops/decentralized-intelligence/",
+      "published": "Tue, 17 Nov 2026 15:34:57 +0000",
+      "summary": "DI is building a user-owned financial AI Agent network that combines market intelligence, AI-powered research and quantitative strategies across crypto and U.S. stocks. Ahead of its product launches and planned $DI token, participants can earn DI Points through daily check-ins and social tasks, with potential eligibility for its upcoming Genesis NFT collection and $DI airdrop. 🪂 Earn DI Points Ahead of $DI TGE The Points campaign combines daily c",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "209b65d715f6f35111",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Aura Protocol Airdrop",
+      "url": "https://airdropalert.com/airdrops/aura-protocol-testnet/",
+      "published": "Mon, 16 Nov 2026 16:26:19 +0000",
+      "summary": "Aura Protocol is a decentralized launchpad for robotics, mechatronics and real-world asset projects. The Aura Airdrop allocates 150 million $AURA tokens to eligible participants who earn Points through transactions, staking and community activities on the LitVM LiteForge testnet. 🪂 Earn Points toward $AURA Airdrop Rewards Aura Protocol runs Airdrop ZERO , an incentivized campaign allocating 150 million $AURA, representing 30% of the total token s",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "79559c1b4426d6d08c",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "RISEx Airdrop",
+      "url": "https://airdropalert.com/airdrops/risex/",
+      "published": "Mon, 16 Nov 2026 14:04:40 +0000",
+      "summary": "RISEx is a decentralized exchange for high-speed onchain trading across cryptocurrencies, stocks, ETFs and commodities, operating on its own high-performance Ethereum Layer 2, RISE Chain. Through its Ignite rewards program, trading, liquidity provision and referrals generate RISEx Points, which may qualify participants for a future airdrop after the $RISE TGE. 🪂 Earn RISE Points and USDC Rewards The RISEx Ignite rewards program distributes 200,00",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "506c099da6a334ecdf",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "GoMining │ Bitcoin Mining",
+      "url": "https://airdropalert.com/airdrops/gomining-bitcoin-mining-platform/",
+      "published": "Sat, 14 Nov 2026 17:23:41 +0000",
+      "summary": "GoMining is a Bitcoin mining ecosystem that connects digital miners to real mining infrastructure, allowing participants to earn $BTC without owning or maintaining physical equipment. GoMining Rewards include a free Bonus Miner, task-based mining upgrades, $GOMINING tokens, referral commissions, Simple Earn, mining-power cashback and prizes from Raffles & Contests. ⛏️ Bitcoin Mining: Earn $BTC & $GOMINING GoMining provides several earning opportu",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "546e7d8ae166267c72",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Kleos Airdrop",
+      "url": "https://airdropalert.com/airdrops/kleos-elysium-launchpad/",
+      "published": "Fri, 13 Nov 2026 14:39:17 +0000",
+      "summary": "Kleos is a token launchpad on Elysium where trading, daily check-ins and eligible token holdings earn Points toward a clan-based competition. The Kleos Airdrop allocates 30 million $KLEOS tokens to the top 15 clans, with individual rewards determined by each member's contribution. 🪂 Kleos Airdrop: Earn $KLEOS Through Clan Wars The Clan Wars campaign launched on November 7, 2026, with 30 million $KLEOS, representing 3% of the token supply , alloca",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "afa8a3475bad3a5b6c",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Kraken Black Friday Bonus",
+      "url": "https://airdropalert.com/airdrops/kraken-black-friday-bonus/",
+      "published": "Fri, 13 Nov 2026 00:28:43 +0000",
+      "summary": "Kraken has launched the Kraken Black Friday Bonus, offering up to $100 in $BTC for depositing fiat and completing trading milestones between November 12 and December 1, 2026. 🪂 Kraken Black Friday Bonus: Earn Up to $100 in BTC 🎁 The Black Friday Deposit & Trade Bonus features four trading milestones, with Bitcoin rewards increasing as participants reach higher trading volumes. To qualify, participants must enroll in the promotion, deposit at leas",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "5453432e220b4fa819",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Loopscale Airdrop",
+      "url": "https://airdropalert.com/airdrops/loopscale/",
+      "published": "Thu, 12 Nov 2026 13:47:50 +0000",
+      "summary": "Loopscale is a Solana-based lending protocol that enables users to lend assets, borrow against a wide range of collateral, and access fixed-rate loans and leveraged yield strategies. The Loopscale Points program adds rewards for DeFi activity, referrals and free social tasks. Following its merger with Orca, Loopscale announced plans to convert Points, potentially leading to an airdrop, with reward details, token allocations and eligibility yet to",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "503d6cca23558fd77c",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Arch Prime",
+      "url": "https://airdropalert.com/airdrops/arch-prime-waitlist/",
+      "published": "Thu, 12 Nov 2026 00:25:01 +0000",
+      "summary": "Arch Prime is an upcoming full-stack onchain financial platform where users can earn yield, trade and borrow against Bitcoin , Ethereum , Solana and other assets without selling them. The Arch Prime Waitlist is now open, allowing participants to invite friends, climb the rankings and earn referral Points. Arch Network previously announced plans for a $ARCH token and airdrop, although the connection to the new Points program remains unconfirmed. 🪂",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "10142c6e7f9f1c8e18",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Ascend Points Program",
+      "url": "https://airdropalert.com/airdrops/ascend-elysium-launchpad/",
+      "published": "Wed, 11 Nov 2026 14:30:30 +0000",
+      "summary": "Ascend is an onchain token launchpad and trading platform on the Elysium HyperEVM Layer 2, where users can trade tokens, provide liquidity, stake $HYPE and launch memecoins. Ascend Rewards offer trading-fee distributions for eligible token holders, staking opportunities and $KNTQ Points competitions, with additional incentives planned. Rather than issuing its own token, Ascend uses $ KNTQ and $ HYPE in its protocol revenue model . The protocol al",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "58a545b8cbabcdbadc",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Kalos.fun Airdrop",
+      "url": "https://airdropalert.com/airdrops/kalos-fun/",
+      "published": "Tue, 10 Nov 2026 23:44:01 +0000",
+      "summary": "Kalos is an onchain trading platform on Elysium where users can trade everything from memecoins and other tokens to NFTs, swap assets and provide liquidity. The Kalos Airdrop rewards early users with Points that determine future $KALOS allocations, alongside weekly revenue rewards and referral commissions. 🪂 Kalos Airdrop: Earn Points & Weekly Rewards Kalos distributes 1 million Points daily across four reward categories: • Trading (400,000 Point",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "23858948d7565f8f91",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Raycash Points Program",
+      "url": "https://airdropalert.com/airdrops/raycash/",
+      "published": "Tue, 10 Nov 2026 12:31:50 +0000",
+      "summary": "Raycash is a stablecoin app powered by Zama, letting people hold, grow and spend stablecoins privately while keeping their balances and payment amounts encrypted. Early supporters can earn Raycash Points through social quests and referrals, with potential future benefits yet TBA. 🪂 Earn Raycash Points & Get Early Access Raycash runs a free rewards program allowing participants to earn 1,000 RP through six social quests , plus 120 RP per eligible ",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "f97897e33188678c74",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Elysium Mainnet Airdrops",
+      "url": "https://airdropalert.com/airdrops/elysium-mainnet/",
+      "published": "Mon, 09 Nov 2026 22:28:30 +0000",
+      "summary": "Elysium is a high-performance Layer 2 built by Kinetiq to accelerate Hyperliquid with faster, more efficient onchain execution. The Elysium mainnet launch on November 9, brings new opportunities across the ecosystem, including incentive programs, token rewards and potential airdrops. 🪂 Elysium Ecosystem Rewards & Potential Airdrops Kinetiq has reserved part of the $KNTQ supply for protocol growth and ecosystem rewards, leaving room for future inc",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "80459b42d4e0bfc20a",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "OnRe Finance Airdrop",
+      "url": "https://airdropalert.com/airdrops/onre-finance/",
+      "published": "Sun, 08 Nov 2026 22:46:15 +0000",
+      "summary": "OnRe is a Solana-based on-chain reinsurance platform bringing real-world insurance returns to DeFi through $ONyc, a yield-bearing asset that can be held or deployed across lending, liquidity and other yield strategies. Alongside these opportunities, the OnRe Points program rewards ONyc holdings and DeFi activity, with accumulated Points potentially qualifying for a future airdrop. 💸 Earn ONyc Yield, DeFi Income and Points 🪂 Holding $ ONyc provide",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "444b55595285e4f630",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Zoi Network Airdrop",
+      "url": "https://airdropalert.com/airdrops/zoi-network/",
+      "published": "Sat, 07 Nov 2026 20:25:45 +0000",
+      "summary": "Zoi Network is a cryptocurrency payment network developing Bluetooth transactions that work without internet access, with the Zoi Airdrop rewarding early participants through mobile Syncs, daily streaks and referrals. Accumulated $ZOI rewards are set to migrate to mainnet at TGE. 🪂 Zoi Airdrop: Earn $ZOI With Free Mobile Mining The Zoi Network app rewards participants with 10 $ZOI per Sync , available every four hours, while daily streaks increas",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "bb1e42b3c7527ce48f",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "ZeruAI Airdrop",
+      "url": "https://airdropalert.com/airdrops/zeruai-zap-markets/",
+      "published": "Fri, 06 Nov 2026 22:34:03 +0000",
+      "summary": "ZeruAI is an AI-powered onchain intelligence platform introducing ActivityFi through ZeruAI Zaps Rewards. Its Zaps Markets platform lets participants earn points, join sponsored campaigns and qualify for new zToken markets with potential $USDC and trading-fee rewards. ZeruAI also plans to launch its native $ZERU token, creating a potential future airdrop opportunity, although no community distribution or points conversion has been confirmed. 🪂 Ea",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "14b2ab5443c24df4e7",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Inverted Lambda Airdrop",
+      "url": "https://airdropalert.com/airdrops/inverted-lambda/",
+      "published": "Thu, 05 Nov 2026 19:30:40 +0000",
+      "summary": "Inverted Lambda: Decentralized Infrastructure for Physical AI Training robots requires more than powerful AI models. They need real-world demonstrations that teach them how to move, manipulate objects and interact with their surroundings. Inverted Lambda is a robotics lab developing decentralized infrastructure for Physical AI, connecting human contributors, robot operators and AI developers to collect, verify and monetize the training data intel",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "05dc8a1fa9c4d05341",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Degen Ecosystem Rewards",
+      "url": "https://airdropalert.com/airdrops/degen-tips-ecosystem/",
+      "published": "Wed, 04 Nov 2026 18:39:35 +0000",
+      "summary": "DEGEN: From Memecoin to a Growing Crypto Ecosystem DEGEN is a crypto ecosystem that has grown from a Farcaster tipping token into a network of social applications, DeFi platforms and onchain trading products. Launched on Base in January 2024, $DEGEN quickly gained attention, surpassing $700 million in market capitalization by April. Today, the token trades on major exchanges, including Coinbase , Bybit , OKX , MEXC and Kraken . In March 2024, DEG",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "cbce4569f241505a8e",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Polymarket Perps Trading Competition",
+      "url": "https://airdropalert.com/airdrops/polymarket-perps-trading-competition/",
+      "published": "Tue, 03 Nov 2026 22:19:17 +0000",
+      "summary": "Polymarket has launched its first Perps Trading Competition, awarding $50,000 in pUSD to the top 50 perpetual futures traders, with $10,000 for first place. Running through November 16, 2026, the competition features boosted scoring on selected markets, including Anthropic pre-IPO. 🪂 Polymarket $50K Perps Trading Competition The Polymarket Perps Trading Competition rewards traders based on profitability and trading volume, with the following priz",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "f207dc3b41e9748f83",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Squeekchain Airdrop",
+      "url": "https://airdropalert.com/airdrops/squeekchain/",
+      "published": "Tue, 03 Nov 2026 20:27:09 +0000",
+      "summary": "Squeekchain is a hamster-powered Ethereum project featuring Squeektoshi, the WHEELY9000, Squeek NFTs and the $SQK token. Its mining system turns a real hamster's wheel activity into onchain work, generating $SQK rewards for NFT holders based on their active mining power. The Squeekchain Genesis campaign invites early participants to farm Aura through referrals, games, community activities and development contributions, with leaderboard rankings d",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "0426d139173019b055",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "MemeBitcoin Airdrop",
+      "url": "https://airdropalert.com/airdrops/memebitcoin/",
+      "published": "Mon, 02 Nov 2026 19:32:11 +0000",
+      "summary": "What if the private keys to Satoshi's Bitcoin wallets could one day be cracked? MemeBitcoin turns this billion-dollar question into an interactive crypto experience, where participants test real Bitcoin wallet targets and explore the potential threat quantum computing poses to Bitcoin. Alongside the hunt, community missions, Proof-of-Viral campaigns and referrals let participants earn Points and collect Emblems, with the potential for a future $M",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "d41edf34e6389ae58c",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "OKX Flash Earn Airdrop",
+      "url": "https://airdropalert.com/airdrops/okx-flash-earn/",
+      "published": "Mon, 02 Nov 2026 16:55:23 +0000",
+      "summary": "OKX is distributing 1,000,000 $USDT through its Flash Earn campaign , allowing $BTC and $ETH holders to earn Simple Earn interest alongside bonus $USDT airdrop rewards. Subscriptions opened October 31, with the campaign running from November 3 to 8, 2026 . 🪂 Win a Share of 1,000,000 $USDT with OKX Flash Earn The Flash Earn campaign features two subscription options, rewarding eligible $BTC and $ETH subscribers with additional $USDT on top of appl",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "97912eb55ed25f8c71",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "SmartX Terminal Waitlist",
+      "url": "https://airdropalert.com/airdrops/smartx-terminal-waitlist/",
+      "published": "Sun, 01 Nov 2026 18:55:33 +0000",
+      "summary": "SmartX is a social trading platform bringing memecoins, perpetuals, stocks and prediction markets into one app. Through the SmartX Waitlist, participants can discover their trading personality, climb the leaderboard and unlock early-access benefits and campaign rewards. 🪂 Waitlist Rewards & Potential Airdrop SmartX rewards early participation with Boost for every verified referral. More Boost improves leaderboard rankings and unlocks additional b",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "3f58e28522f8f3cb63",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Ryfinite Airdrop",
+      "url": "https://airdropalert.com/airdrops/ryfinite/",
+      "published": "Sat, 31 Oct 2026 18:17:18 +0000",
+      "summary": "Ryfinite is a Web3 platform focused on early-stage token launches and DeFi opportunities. Through the Ryfinite Airdrop, users can earn Gems by completing quests and inviting friends, then commit them to the $RFN Launchpool to mine their share of 90 million $RFN airdrop pool . 🪂 Earn Gems to Mine Your Share of the 90M $RFN Airdrop Gems are Ryfinite's non-tradable reward points, earned through social and on-chain quests, daily check-ins, referrals ",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "2970510a47c2ae6564",
+      "source": "AirdropAlert (каталог, НЕ подтверждение)",
+      "title": "Incentiv Airdrop",
+      "url": "https://airdropalert.com/airdrops/incentiv/",
+      "published": "Fri, 30 Oct 2026 18:49:11 +0000",
+      "summary": "Incentiv is a Layer 1 blockchain designed to make blockchain technology simple, accessible and rewarding for everyone. Through the Incentiv Portal, participants can earn XP from onchain transactions, achievements and referrals toward $CENT token airdrop rewards. 🪂 Earn XP toward $CENT Airdrop Rewards Incentiv rewards participation through XP, MysteryBoxes and $CENT incentives. Its initial distribution campaign allocates 85 million $ CENT to the U",
+      "status": "Неизвестно, можно ли получить деньги без вложений"
+    },
+    {
+      "id": "79bcb560d0f0a396f1",
+      "source": "Kraken (официальный блог)",
+      "title": "Get up to $100 in BTC with our Black Friday Deposit & Trade Bonus",
+      "url": "https://blog.kraken.com/product/promotions/black-friday-deposit-trade-bonus",
+      "published": "Thu, 12 Nov 2026 14:55:13 +0000",
+      "summary": "Enroll, deposit $1,000 in fiat and trade your way through four stacked milestones, November 12 to December 1. The post Get up to $100 in BTC with our Black Friday Deposit & Trade Bonus appeared first on Kraken Blog .",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    },
+    {
+      "id": "f67b5c597a1cfd0b71",
+      "source": "Kraken (официальный блог)",
+      "title": "The Anthropic Pre-IPO Challenge: compete for $20,000 in ANTHROPICX on Kraken Pro",
+      "url": "https://blog.kraken.com/product/promotions/the-anthropic-pre-ipo-challenge-nov-2026",
+      "published": "Wed, 11 Nov 2026 08:41:20 +0000",
+      "summary": "Trade Anthropic price exposure on Kraken Pro with up to 10x leverage, rank by volume, and claim your share of the prize pool The post The Anthropic Pre-IPO Challenge: compete for $20,000 in ANTHROPICX on Kraken Pro appeared first on Kraken Blog .",
+      "status": "Похоже, есть платные условия/транзакции: ПРОВЕРИТЬ"
+    }
+  ],
+  "health": {
+    "CoinGecko (цены)": "OK",
+    "AirdropAlert (каталог, НЕ подтверждение)": "OK, кандидатов: 30",
+    "Kraken (официальный блог)": "OK, кандидатов: 2",
+    "Coinbase (официальный блог)": "Недоступен или формат изменился: HTTPError",
+    "Telegram": "Не настроен (необязательно)"
+  },
+  "real_earnings_usd": 0
+}
