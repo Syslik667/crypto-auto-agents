@@ -1,0 +1,13 @@
+{
+  "market_ids": [
+    "weth"
+  ],
+  "contracts": [
+    {
+      "chain_id": "1",
+      "address": "0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
+      "label": "WETH",
+      "reference": "https://developers.uniswap.org/docs/protocols/v3/deployments/v3-ethereum-deployments"
+    }
+  ]
+}

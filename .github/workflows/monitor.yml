@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: crypto-monitor-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   monitor:
     runs-on: ubuntu-latest
@@ -18,13 +22,27 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Offline regression tests
+        run: python -B -m unittest discover -s tests -v
       - name: Run crypto agents
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_SOURCE_BOT_TOKEN: ${{ secrets.TELEGRAM_SOURCE_BOT_TOKEN }}
+          TELEGRAM_PUBLIC_CHANNEL: ${{ vars.TELEGRAM_PUBLIC_CHANNEL }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
+          REDDIT_USER_AGENT: ${{ secrets.REDDIT_USER_AGENT }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}
+          DISCORD_PUBLIC_ANNOUNCEMENT_ID: ${{ vars.DISCORD_PUBLIC_ANNOUNCEMENT_ID }}
+          X_PUBLIC_POSTS: ${{ vars.X_PUBLIC_POSTS }}
+          CHAINABUSE_API_KEY: ${{ secrets.CHAINABUSE_API_KEY }}
         run: python agent.py
       - name: Save reports
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add reports/ data/
+          git add -- reports/LATEST.md reports/LATEST.html reports/latest.json data/seen.json
           if ! git diff --cached --quiet; then
             git commit -m 'Update crypto reports'
             git push
