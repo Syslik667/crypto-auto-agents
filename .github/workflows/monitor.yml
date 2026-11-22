@@ -15,10 +15,14 @@ concurrency:
 
 jobs:
   monitor:
+    if: github.ref_type == 'branch'
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -39,11 +43,19 @@ jobs:
           CHAINABUSE_API_KEY: ${{ secrets.CHAINABUSE_API_KEY }}
         run: python agent.py
       - name: Save reports
+        id: publish
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- reports/LATEST.md reports/LATEST.html reports/latest.json data/seen.json
-          if ! git diff --cached --quiet; then
-            git commit -m 'Update crypto reports'
-            git push
-          fi
+          python -B scripts/save_reports.py "$GITHUB_REF"
+      - name: Retain unpublished reports
+        if: failure() && steps.publish.outcome == 'failure'
+        uses: actions/upload-artifact@v4
+        with:
+          name: unpublished-reports-${{ github.run_id }}-${{ github.run_attempt }}
+          retention-days: 7
+          path: |
+            reports/LATEST.md
+            reports/LATEST.html
+            reports/latest.json
+            data/seen.json
