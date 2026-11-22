@@ -16,6 +16,37 @@ class Channel(NS):
 
 
 class LocalScannerTests(unittest.IsolatedAsyncioTestCase):
+    async def test_inaccessible_peer_does_not_abort_named_folder(self):
+        from local_telegram import scanner
+
+        class ChannelPrivateError(Exception):
+            pass
+
+        folder = NS(title=NS(text="Крипта"), pinned_peers=[],
+                    include_peers=[NS(channel_id=1), NS(channel_id=2), NS(channel_id=3)])
+
+        class Client:
+            async def get_entity(self, peer):
+                if peer.channel_id == 1:
+                    raise ChannelPrivateError()
+                return Channel(id=peer.channel_id, broadcast=True, username="public")
+
+            async def iter_messages(self, entity, **kwargs):
+                if entity.id == 2:
+                    raise ChannelPrivateError()
+                yield NS(message="Example Learn & Earn. PERSONAL CANARY", entities=[])
+                yield NS(message="Send your seed phrase https://blog.kraken.com/reward", entities=[])
+
+        with patch.object(scanner, "channels", lambda c, f, counts: folder_channels(c, [folder], f, counts)), \
+                patch.object(scanner, "mentions", lambda content, _: {"example"} if "Example" in content else set()):
+            payload = await scan(Client(), Channel, "Крипта")
+        self.assertEqual(payload["coverage"]["skipped_private"], 2)
+        self.assertEqual(payload["coverage"]["completed"], 1)
+        self.assertEqual(payload["coverage"]["suspicious"], 1)
+        self.assertEqual(payload["program_mentions"], ["example"])
+        self.assertEqual(payload["links"], [])
+        self.assertNotIn("CANARY", json.dumps(payload))
+
     async def test_named_folder_resolves_only_included_channel_peers(self):
         from unittest.mock import AsyncMock, Mock
         p = NS(channel_id=10)

@@ -6,4 +6,11 @@ __pycache__/
 .env
 .env.*
 public-links.json
+monitor-status.json
+monitor.log*
+reward-report.json
+reward-report.md
+draft-*.txt
+*.sqlite3
+*.sqlite3-*
 .venv/
