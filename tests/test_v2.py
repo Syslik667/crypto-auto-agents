@@ -143,11 +143,12 @@ class PublicOnlyTests(unittest.TestCase):
         env = dict(TELEGRAM_SOURCE_BOT_TOKEN="secret", TELEGRAM_PUBLIC_CHANNEL="@publicchannel")
         chat = dict(type="channel", username="publicchannel", id=10,
                     pinned_message={"chat": {"id": 10}, "text": PUB + " PRIVATE-CANARY"})
-        with patch.dict(os.environ, env), patch.object(social, "read_json", return_value={"result": chat}):
+        with patch.dict(os.environ, env), patch.object(social, "read_json", return_value={"ok": True, "result": chat}):
             self.assertEqual(social.telegram(), {PUB})
             chat["has_protected_content"] = True
-            with self.assertRaises(ValueError):
-                social.telegram()
+            health = {}
+            self.assertEqual(social.telegram(health), set())
+            self.assertEqual(health["Telegram @publicchannel"], "ValueError")
 
     def test_reddit_public_only(self):
         env = dict(REDDIT_CLIENT_ID="id", REDDIT_CLIENT_SECRET="s", REDDIT_USER_AGENT="app")
