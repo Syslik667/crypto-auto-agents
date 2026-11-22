@@ -21,10 +21,11 @@ def get_market_data(selected=()):
     return market_analyst.prices(fetch, selected)
 
 
-def read_state():
-    if not STATE_PATH.exists():
+def read_state(path=None):
+    path = STATE_PATH if path is None else path
+    if not path.exists():
         return {"seen": []}
-    obj = json.loads(STATE_PATH.read_text(encoding="utf-8"))
+    obj = json.loads(path.read_text(encoding="utf-8"))
     if not isinstance(obj, dict) or not isinstance(obj.get("seen"), list):
         raise ValueError("Invalid history; refusing to reset it")
     return obj
@@ -50,10 +51,12 @@ def send_telegram(payload):
     return telegram_client.notify(payload)
 
 
-def run():
-    REPORTS.mkdir(parents=True, exist_ok=True)
-    DATA.mkdir(parents=True, exist_ok=True)
-    state = read_state()
+def run(output_root=None, notifier=None, include_reward_leads=False):
+    reports = REPORTS if output_root is None else output_root / "reports"
+    state_path = STATE_PATH if output_root is None else output_root / "data" / "seen.json"
+    reports.mkdir(parents=True, exist_ok=True)
+    state_path.parent.mkdir(parents=True, exist_ok=True)
+    state = read_state(state_path)
     now = dt.datetime.now(dt.timezone.utc)
     today = now.date()
     month = now.strftime("%Y-%m")
@@ -122,12 +125,15 @@ def run():
             history[key] = None
     payload = dict(time_utc=now.strftime("%Y-%m-%d %H:%M"), market=market, new=new, latest=latest, top=top,
                    health=health, contracts=list(assessments.values()), real_earnings_usd=0)
-    health["Telegram · уведомления"] = send_telegram(payload)
+    if include_reward_leads:
+        from intelligence.reward_hunter import discover
+        payload["reward_leads"] = discover(news)
+    health["Telegram · уведомления"] = (notifier or send_telegram)(payload)
     outputs = {"LATEST.md": build_markdown(payload), "LATEST.html": build_html(payload),
                "latest.json": json.dumps(payload, ensure_ascii=False, indent=2, allow_nan=False)}
     for name, content in outputs.items():
-        save(REPORTS / name, content)
-    save(STATE_PATH, json.dumps({"seen": list(history)[-6000:], "chainabuse": {month: cache}}, indent=2))
+        save(reports / name, content)
+    save(state_path, json.dumps({"seen": list(history)[-6000:], "chainabuse": {month: cache}}, indent=2))
     print(f"{payload['time_utc']} UTC · market {len(market)}, candidates {len(items)}, new {len(new)}")
     return payload
 

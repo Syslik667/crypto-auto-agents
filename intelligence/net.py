@@ -45,7 +45,14 @@ class Redirect(urllib.request.HTTPRedirectHandler):
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
-def fetch(url, limit=2_000_000, *, headers=None, data=None):
+class ExactRedirect(Redirect):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        if canonical(req.full_url) != canonical(newurl):
+            raise ValueError("Official rules location changed")
+        return super().redirect_request(req, fp, code, msg, headers, newurl)
+
+
+def fetch(url, limit=2_000_000, *, headers=None, data=None, exact_url=False):
     host = urlsplit(url).hostname
     if not url.startswith("https://") or not host:
         raise ValueError("HTTPS required")
@@ -53,7 +60,8 @@ def fetch(url, limit=2_000_000, *, headers=None, data=None):
         raise RuntimeError("Host quota reached")
     req = urllib.request.Request(url, headers={"User-Agent": UA, **(headers or {})}, data=data)
     try:
-        with urllib.request.build_opener(Redirect()).open(req, timeout=6) as response:
+        redirect = ExactRedirect() if exact_url else Redirect()
+        with urllib.request.build_opener(redirect).open(req, timeout=6) as response:
             raw = response.read(limit + 1)
             if len(raw) > limit:
                 raise ValueError("Response too large")

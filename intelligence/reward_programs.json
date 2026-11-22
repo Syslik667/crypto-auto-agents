@@ -1,0 +1,108 @@
+[
+  {
+    "id": "revolut-learn", "title": "Revolut Crypto Learn & Earn", "category": "learn",
+    "aliases": ["Revolut Learn & Earn", "Revolut Crypto Learn", "Revolut Learn and Earn", "Криптообучение Revolut"],
+    "url": "https://www.revolut.com/de-DE/legal/cryptocurrency-terms/",
+    "evidence": {
+      "https://www.revolut.com/de-DE/legal/cryptocurrency-terms/": ["crypto learn & earn", "rewards are limited while funds last"],
+      "https://help.revolut.com/de-DE/help/wealth/cryptocurrencies/learn-and-earn/what-is-crypto-learn-earn-and-where-can-i-access-it/": ["im EWR"],
+      "https://help.revolut.com/en-DE/help/wealth/cryptocurrencies/transferring-cryptocurrencies/withdrawing-cryptocurrencies/crypto-withdrawal-basics/how-much-does-it-cost-to-withdraw-crypto/": ["service fee", "network fee"]
+    },
+    "germany": "eligible", "kyc": "required", "fees": "withdrawal", "deposit": "unknown", "deadline": null,
+    "access": "account", "reward": "conditional",
+    "payout": "Начисление токенов на баланс Revolut. Продажа или перевод вручную зависят от актива, минимальной суммы и комиссий.",
+    "steps": ["В приложении откройте Крипто → Обзор → Обучение.", "Проверьте знак награды, остаток фонда и отсутствие требования пополнить счёт для конкретного урока.", "Пройдите урок и викторину вручную. Проверьте начисление в истории."],
+    "risks": ["Задание и наличие награды видны только в аккаунте.", "Минимум вывода, комиссия или требования к проверке аккаунта могут сделать участие бессмысленным."]
+  },
+  {
+    "id": "ethereum-esp", "title": "Ethereum Foundation Ecosystem Support Program", "category": "grant",
+    "aliases": ["Ethereum Foundation ESP", "Ethereum ESP", "Ecosystem Support Program"],
+    "url": "https://esp.ethereum.foundation/applicants",
+    "evidence": {"https://esp.ethereum.foundation/applicants": ["identity verification", "on-chain in ETH by default", "wishlist"]},
+    "germany": "unknown", "kyc": "required", "fees": "unknown", "deposit": "unknown", "deadline": null,
+    "access": "round", "reward": "conditional",
+    "payout": "Обычно ETH по этапам после отбора, проверки личности и подписания грантового письма.",
+    "steps": ["Выберите открытый пункт Wishlist, RFP или раунд подачи.", "Подготовьте описание открытого проекта, методологию, этапы, бюджет и критерии готовности.", "Сверьте правила конкретного раунда и подайте заявку вручную."],
+    "risks": ["Конкурсный отбор и обязательства по проекту.", "Распределение по этапам, волатильность ETH."]
+  },
+  {
+    "id": "stellar-build", "title": "Stellar Community Fund Build Award", "category": "grant",
+    "aliases": ["Stellar Community Fund", "SCF Build Award"],
+    "url": "https://communityfund.stellar.org/awards",
+    "evidence": {
+      "https://communityfund.stellar.org/awards": ["interest form submission", "tranche payments"],
+      "https://stellar.gitbook.io/scf-handbook/scf-awards/build-award": ["KYC", "milestone-based funding"]
+    },
+    "germany": "unknown", "kyc": "required", "fees": "unknown", "deposit": "unknown", "deadline": null,
+    "access": "round", "reward": "conditional",
+    "payout": "Выплата выбранным командам траншами в XLM, по мере прохождения этапов.",
+    "steps": ["На странице программы найдите раунд, принимающий заявки.", "Выберите трек и подготовьте описание проекта на Stellar, план интеграции, бюджет и этапы.", "Проверьте допуск команды, затем отправьте формы сами."],
+    "risks": ["Закрытые раунды и конкурсный отбор.", "KYC/KYB и выполнение этапов перед выплатой."]
+  },
+  {
+    "id": "ens-bounty", "title": "ENS Bug Bounty (Immunefi)", "category": "bounty",
+    "aliases": ["ENS bug bounty", "ENS Immunefi"],
+    "url": "https://immunefi.com/bug-bounty/ens/information/",
+    "evidence": {"https://immunefi.com/bug-bounty/ens/information/": ["reward payment terms", "KYC"]},
+    "germany": "unknown", "kyc": "required", "fees": "unknown", "deposit": "unknown", "deadline": null,
+    "access": "public", "reward": "conditional",
+    "payout": "После принятия отчёта и KYC, по условиям раздела Reward Payment Terms.",
+    "steps": ["Прочитайте правила программы, допустимый охват и условия выплат.", "При наличии собственного допустимого отчёта подготовьте черновик для официальной формы.", "Проверьте правила раскрытия и отправьте отчёт вручную."],
+    "risks": ["Дубликаты, отчёты вне охвата и непринятые отчёты не оплачиваются.", "Программа требует квалифицированной работы."]
+  },
+  {
+    "id": "ethereum-bounty", "title": "Ethereum Foundation Bug Bounty", "category": "bounty",
+    "aliases": ["Ethereum Bug Bounty", "Ethereum Foundation Bug Bounty"],
+    "url": "https://ethereum.org/bug-bounty/",
+    "evidence": {
+      "https://ethereum.org/bug-bounty/": ["rewards are paid out in ETH", "proof of your identity"],
+      "https://bbp-form.ethereum.org/": ["required burn"]
+    },
+    "germany": "unknown", "kyc": "required", "fees": "required", "deposit": "unknown", "deadline": "rolling",
+    "access": "public", "reward": "conditional", "payout": "ETH после принятия отчёта и проверки личности.",
+    "steps": ["Проверьте актуальные правила подачи, включая обязательное сжигание ETH.", "Для поиска без начальных затрат пропустите этот вариант, пока форма требует оплату."],
+    "risks": ["Обязательные расходы до рассмотрения.", "Оплата подачи сама по себе не даёт права на награду."]
+  },
+  {
+    "id": "galxe-quests", "title": "Galxe Rewards Hub / переход на Gravity", "category": "quest",
+    "aliases": ["Galxe Rewards Hub", "Galxe Gold", "Galxe Quest"],
+    "url": "https://help.galxe.com/en/articles/10373007-introducing-galxe-rewards-hub",
+    "evidence": {
+      "https://help.galxe.com/en/articles/10373007-introducing-galxe-rewards-hub": ["a claiming fee applies", "experience points"],
+      "https://help.galxe.com/en/articles/18361711-galxe-is-integrating-into-gravity-what-you-need-to-know": ["shut down galxe quest"]
+    },
+    "germany": "unknown", "kyc": "unknown", "fees": "required", "deposit": "unknown", "deadline": null,
+    "access": "round", "reward": "speculative", "payout": "",
+    "steps": ["Сверьте сроки закрытия квестов и правила отдельной кампании в официальном справочном центре."],
+    "risks": ["XP и GG не являются гарантированной выплатой.", "При получении GG предусмотрена комиссия."]
+  },
+  {
+    "id": "sepolia", "title": "Sepolia testnet", "category": "testnet",
+    "aliases": ["Sepolia airdrop", "Sepolia reward", "Sepolia rewards"],
+    "url": "https://ethereum.org/developers/docs/networks/",
+    "evidence": {"https://ethereum.org/developers/docs/networks/": ["ETH on testnets is supposed to have no real value", "Sepolia"]},
+    "germany": "unknown", "kyc": "unknown", "fees": "unknown", "deposit": "unknown", "deadline": null,
+    "access": "public", "reward": "none", "payout": "",
+    "steps": ["Сверьте назначение тестовых токенов в документации сети."],
+    "risks": ["Тестовые токены предназначены для тестирования.", "Обещание выплат за Sepolia требует отдельного официального объявления организатора."]
+  },
+  {
+    "id": "optimism-airdrop-5", "title": "Optimism Airdrop 5", "category": "airdrop",
+    "aliases": ["Optimism Airdrop 5", "Optimism Airdrop #5", "OP Airdrop #5"],
+    "url": "https://app.optimism.io/airdrops/5",
+    "evidence": {"https://app.optimism.io/airdrops/5": ["claim by oct 9, 2025", "eligibility details"]},
+    "germany": "unknown", "kyc": "unknown", "fees": "unknown", "deposit": "unknown", "deadline": "2025-10-09",
+    "access": "closed", "reward": "conditional", "payout": "Историческая раздача OP. Опубликованный срок истёк.",
+    "steps": ["Сверьте номер раздачи и срок в официальном анонсе."],
+    "risks": ["Предложения получить эту раздачу после срока требуют особой осторожности."]
+  },
+  {
+    "id": "coinbase-learn", "title": "Coinbase Learning rewards", "category": "learn",
+    "aliases": ["Coinbase Learn & Earn", "Coinbase Learning rewards", "Coinbase Learn and Earn"],
+    "url": "https://help.coinbase.com/coinbase/getting-started/getting-started-with-coinbase/learning-rewards-faq-and-terms",
+    "evidence": {"https://help.coinbase.com/coinbase/getting-started/getting-started-with-coinbase/learning-rewards-faq-and-terms": ["learning rewards are no longer available"]},
+    "germany": "unknown", "kyc": "unknown", "fees": "unknown", "deposit": "unknown", "deadline": "2025-05-27",
+    "access": "closed", "reward": "none", "payout": "", "steps": [],
+    "risks": ["Программа завершена. Новые приглашения требуют отдельной официальной проверки."]
+  }
+]

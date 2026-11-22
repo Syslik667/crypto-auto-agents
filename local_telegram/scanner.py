@@ -13,11 +13,19 @@ import subprocess
 import sys
 import tempfile
 
-from intelligence.social_monitor import links, publisher_link
+from intelligence.social_monitor import links, publisher_link, TRIGGERS
+from intelligence.reward_hunter import catalog, mentions
+from local_telegram import vault
 
 TOPICS = re.compile(r"crypto|airdrop|bitcoin|ethereum|blockchain|defi|finance|financial|invest|"
                     r"крипт|аирдроп|эйрдроп|биткоин|эфириум|блокчейн|финанс|инвест", re.I)
 ROOT = Path(__file__).resolve().parents[1]
+PROMOTION = re.compile(r"а[ий]рдроп|эйрдроп|раздач|розыгрыш|награ[дт]|бонус", re.I)
+SCAM = re.compile(
+    r"(?:(?:enter|provide|send|share|введите|укажите|пришлите|отправьте)\s+(?:your\s+|вашу?\s+)?"
+    r"(?:seed[- ]?phrase|private key|recovery phrase|сид[- ]?фраз\w*|приватн\w+\s+ключ))"
+    r"|(?:pay|send|переведите|оплатите).{0,55}(?:unlock your reward|release your reward|для получения приза)"
+    r"|(?:guaranteed (?:profit|returns?)|гарантированн\w+ (?:доход|прибыл))", re.I)
 
 
 def private_directory():
@@ -31,11 +39,13 @@ def private_directory():
     if os.name != "nt":
         path.chmod(0o700)
     else:
-        who = subprocess.check_output(["whoami", "/user", "/fo", "csv", "/nh"])
+        who = subprocess.check_output(["whoami", "/user", "/fo", "csv", "/nh"],
+                                      creationflags=subprocess.CREATE_NO_WINDOW)
         sid = re.search(rb'"(S-1-[0-9-]+)"', who)[1].decode("ascii")
         subprocess.run(["icacls", str(path), "/inheritance:r", "/grant:r",
                         f"*{sid}:(OI)(CI)F", "*S-1-5-18:(OI)(CI)F"],
-                       check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                       check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                       creationflags=subprocess.CREATE_NO_WINDOW)
     return path
 
 
@@ -45,7 +55,7 @@ def readable(entity):
             and not getattr(entity, "noforwards", False))
 
 
-async def channels(client, folder):
+async def channels(client, folder, counts):
     if folder is None:
         async for dialog in client.iter_dialogs():
             entity = dialog.entity
@@ -54,11 +64,11 @@ async def channels(client, folder):
         return
     from telethon import functions
     response = await client(functions.messages.GetDialogFiltersRequest())
-    async for entity in folder_channels(client, response.filters, folder):
+    async for entity in folder_channels(client, response.filters, folder, counts):
         yield entity
 
 
-async def folder_channels(client, filters, folder):
+async def folder_channels(client, filters, folder, counts=None):
     matches = [f for f in filters if getattr(getattr(f, "title", None), "text", None) == folder]
     if len(matches) != 1:
         raise FolderError("Укажите точное уникальное имя папки.")
@@ -71,7 +81,15 @@ async def folder_channels(client, filters, folder):
         cid = getattr(peer, "channel_id", None)
         if cid is not None and cid not in excluded:
             excluded.add(cid)
-            yield await client.get_entity(peer)
+            try:
+                entity = await client.get_entity(peer)
+            except Exception as exc:
+                if type(exc).__name__ != "ChannelPrivateError":
+                    raise
+                if counts is not None:
+                    counts["skipped_private"] += 1
+                continue
+            yield entity
     if dynamic:
         async for dialog in client.iter_dialogs():
             entity = dialog.entity
@@ -90,8 +108,11 @@ class FolderError(ValueError):
 
 async def scan(client, channel_type, folder=None):
     result = set()
-    counts = {"selected_public": 0, "skipped_private": 0, "failed": 0}
-    async for entity in channels(client, folder):
+    program_mentions = set()
+    programs = catalog() if folder else []
+    counts = {"selected_public": 0, "skipped_private": 0, "failed": 0, "completed": 0,
+              "messages_read": 0, "promotions": 0, "suspicious": 0}
+    async for entity in channels(client, folder, counts):
         if not isinstance(entity, channel_type) or not readable(entity):
             continue
         if not getattr(entity, "username", None):
@@ -102,28 +123,41 @@ async def scan(client, channel_type, folder=None):
             async for message in client.iter_messages(entity, limit=30, wait_time=1):
                 if getattr(message, "noforwards", False) or getattr(message, "fwd_from", None):
                     continue
+                counts["messages_read"] += 1
                 content = getattr(message, "message", "") or ""
+                if TRIGGERS.search(content) or PROMOTION.search(content):
+                    counts["promotions"] += 1
+                if SCAM.search(content):
+                    counts["suspicious"] += 1
+                    continue
+                program_mentions.update(mentions(content, programs))
                 for e in getattr(message, "entities", None) or []:
                     content += " " + (getattr(e, "url", "") or "")
                 result.update(u for u in links(content) if publisher_link(u))
+            counts["completed"] += 1
         except Exception as exc:
             # Respect FloodWait instead of trying another account or bypassing the limit.
-            if type(exc).__name__ == "FloodWaitError":
+            if type(exc).__name__ in {"FloodWaitError", "FloodPremiumWaitError"}:
                 raise
-            counts["failed"] += 1
-    return {"generated_utc": dt.datetime.now(dt.timezone.utc).isoformat(),
-            "links": sorted(result), "coverage": counts}
+            counts["skipped_private" if type(exc).__name__ == "ChannelPrivateError" else "failed"] += 1
+    return {"generated_utc": dt.datetime.now(dt.timezone.utc).isoformat(), "folder": folder,
+            "links": sorted(result), "coverage": counts, "program_mentions": sorted(program_mentions)}
 
 
-async def run(login=False, folder="Крипта", show_chat_id=False):
+async def run(login=False, folder="Крипта", show_chat_id=False, return_recipient=False):
     directory = private_directory()
     from telethon import TelegramClient, types
+    from telethon.sessions import StringSession
 
-    if not sys.stdin.isatty() and (login or not all(os.environ.get(k) for k in ("TELEGRAM_API_ID", "TELEGRAM_API_HASH"))):
-        raise SystemExit("Для первого входа нужен локальный терминал. Для фонового запуска передайте API ID и hash через окружение.")
-    api_id = int(os.environ.get("TELEGRAM_API_ID") or getpass.getpass("Telegram API ID: "))
-    api_hash = os.environ.get("TELEGRAM_API_HASH") or getpass.getpass("Telegram API hash: ")
-    client = TelegramClient(str(directory / "account"), api_id, api_hash,
+    saved = vault.load(directory) if os.name == "nt" else None
+    if (sys.stdin is None or not sys.stdin.isatty()) and (
+        login or (not saved and not all(os.environ.get(k) for k in ("TELEGRAM_API_ID", "TELEGRAM_API_HASH")))
+    ):
+        raise ValueError("Local login required")
+    api_id = saved["api_id"] if saved else int(os.environ.get("TELEGRAM_API_ID") or getpass.getpass("Telegram API ID: "))
+    api_hash = saved["api_hash"] if saved else os.environ.get("TELEGRAM_API_HASH") or getpass.getpass("Telegram API hash: ")
+    session = StringSession(saved["session"]) if saved else str(directory / "account")
+    client = TelegramClient(session, api_id, api_hash,
                             receive_updates=False, flood_sleep_threshold=0, request_retries=0)
     client.session.save_entities = False
     try:
@@ -135,6 +169,8 @@ async def run(login=False, folder="Крипта", show_chat_id=False):
                                    password=lambda: getpass.getpass("2FA password: "))
         if not await client.is_user_authorized():
             raise ValueError("Local login required")
+        if saved and client.session.save() != saved["session"]:
+            vault.save(directory, api_id, api_hash, client.session.save())
         if show_chat_id:
             print("Ваш ID для TELEGRAM_CHAT_ID:", (await client.get_me()).id)
         payload = await scan(client, types.Channel, folder)
@@ -143,6 +179,11 @@ async def run(login=False, folder="Крипта", show_chat_id=False):
             json.dump(payload, out, ensure_ascii=False, indent=2)
         Path(out.name).replace(target)
         print("Public-source snapshot saved outside the repository.")
+        if return_recipient:
+            me = await client.get_me()
+            if not me or me.bot:
+                raise ValueError("A local user account is required")
+            return payload, me.id
     finally:
         await client.disconnect()
 

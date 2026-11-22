@@ -2,8 +2,13 @@
 import os
 import re
 from urllib.parse import urlencode
+from urllib.error import HTTPError
 
 from .net import failure, read_json
+
+
+class TelegramRejected(RuntimeError):
+    """Telegram explicitly refused the request; no successful delivery."""
 
 
 class TelegramClient:
@@ -17,9 +22,17 @@ class TelegramClient:
         try:
             data = self._reader(f"https://api.telegram.org/bot{self._token}/{method}",
                                 data=urlencode(values).encode())
+            if isinstance(data, dict) and data.get("ok") is False:
+                raise TelegramRejected("Telegram rejected request")
             if not isinstance(data, dict) or data.get("ok") is not True:
                 raise ValueError("Telegram rejected request")
             return data["result"]
+        except TelegramRejected:
+            raise TelegramRejected("Telegram rejected request") from None
+        except HTTPError as exc:
+            if 400 <= exc.code < 500:
+                raise TelegramRejected(f"HTTP {exc.code}") from None
+            raise RuntimeError("Telegram API request failed") from None
         except Exception:
             raise RuntimeError("Telegram API request failed") from None
 
