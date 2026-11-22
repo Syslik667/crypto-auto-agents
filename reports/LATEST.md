@@ -1,13 +1,10 @@
 # Crypto Cash Hunter v3
 
-**2026-11-22 14:57 UTC** · Бюджет €0 · Заработано $0
+**2026-11-22 19:31 UTC** · Бюджет €0 · Заработано $0
 
 ## TOP-5 новых возможностей
 
-- **[Yakkamon Airdrop](<https://airdropalert.com/airdrops/yakkamon>)** — AirdropAlert (каталог, НЕ подтверждение)
-  - Участие — не указано · Депозит — не указано · Комиссии — не указано · KYC — не указано · Германия — не указано · Вывод — не указано · Окончание — не указано · Награда — points · денежная сумма не установлена
-  - Недостаточно данных · В первоисточнике не установлена пара сеть/адрес
-  - Отбор — публикация каталога, первоисточник не подтверждён
+Новых публикаций, прошедших отбор, в этой проверке нет.
 
 Частичные данные — Coinbase (официальный блог).
 
@@ -15,7 +12,7 @@
 
 ## Рынок за 24 часа
 
-[BTC](<https://www.coingecko.com/en/coins/bitcoin>) $60,863 (+1.08%) · [ETH](<https://www.coingecko.com/en/coins/ethereum>) $1,710.45 (+1.51%) · [SOL](<https://www.coingecko.com/en/coins/solana>) $70.24 (-0.44%) · [WETH](<https://www.coingecko.com/en/coins/weth>) $1,709.8 (+1.42%)
+[BTC](<https://www.coingecko.com/en/coins/bitcoin>) $60,692 (+0.80%) · [ETH](<https://www.coingecko.com/en/coins/ethereum>) $1,713.28 (+1.84%) · [SOL](<https://www.coingecko.com/en/coins/solana>) $70.25 (-0.51%) · [WETH](<https://www.coingecko.com/en/coins/weth>) $1,712.79 (+1.85%)
 
-Новых публикаций 1, всего проверено возможностей 53.
+Новых публикаций 0, всего проверено возможностей 53.
 Доступность источников, все находки и оценки контрактов — [HTML](LATEST.html) · [JSON](latest.json).
