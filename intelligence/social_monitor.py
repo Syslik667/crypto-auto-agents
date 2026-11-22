@@ -1,12 +1,16 @@
 """Only publisher metadata leaves the collector. Social message text is transient."""
 import base64
+import datetime as dt
 import html
+import json
 import os
+from pathlib import Path
 import re
 import xml.etree.ElementTree as ET
 from urllib.parse import urlencode, urlsplit
 
 from .net import canonical, digest, failure, fetch, read_json
+from .telegram_client import monitor
 
 CATALOG = "AirdropAlert (каталог, НЕ подтверждение)"
 SOURCES = {
@@ -72,23 +76,26 @@ def parse_feed(raw, source, *, news=False):
     return out
 
 
-def telegram():
-    channel = os.environ.get("TELEGRAM_PUBLIC_CHANNEL", "").lstrip("@")
-    token = os.environ.get("TELEGRAM_SOURCE_BOT_TOKEN")
-    if not token or not channel:
+def telegram(health=None):
+    return monitor(links, health if health is not None else {}, read_json)
+
+
+def local_telegram():
+    filename = os.environ.get("TELEGRAM_SCAN_PATH")
+    if not filename:
         return None
-    if not re.fullmatch(r"[A-Za-z0-9_]{5,32}", channel):
-        raise ValueError("Public username required")
-    result = read_json(f"https://api.telegram.org/bot{token}/getChat?chat_id=@{channel}")["result"]
-    if (result.get("type") != "channel" or result.get("username", "").lower() != channel.lower()
-            or result.get("has_protected_content")):
-        raise ValueError("Public channel required")
-    post = result.get("pinned_message", {})
-    if (not post or post.get("has_protected_content") or post.get("forward_origin")
-            or post.get("chat", {}).get("id") != result.get("id")):
-        return set()
-    return links(" ".join([post.get("text", ""), post.get("caption", ""),
-                          *(e.get("url", "") for e in post.get("entities", []) + post.get("caption_entities", []))]))
+    path = Path(filename).resolve()
+    if os.environ.get("GITHUB_ACTIONS") == "true" or path.is_relative_to(Path(__file__).resolve().parents[1]):
+        raise ValueError("Local snapshot must stay outside the repository and Actions")
+    with path.open("rb") as handle:
+        raw = handle.read(2_000_001)
+    if len(raw) > 2_000_000:
+        raise ValueError("Snapshot too large")
+    data = json.loads(raw)
+    age = dt.datetime.now(dt.timezone.utc) - dt.datetime.fromisoformat(data["generated_utc"])
+    if not dt.timedelta(0) <= age <= dt.timedelta(days=1):
+        raise ValueError("Snapshot expired")
+    return {u for u in data["links"] if isinstance(u, str) and canonical(u) == u and publisher_link(u)}
 
 
 def reddit():
@@ -196,7 +203,7 @@ def collect(health):
             health[name] = failure(exc)
     public_posts = {u for item in news if item["official"] for u in item["refs"] if "/status/" in u}
     social_links = {}
-    for name, reader in [("Telegram · закрепление", telegram), ("Reddit", reddit),
+    for name, reader in [("Telegram · закрепления", lambda: telegram(health)), ("Telegram · локальный сканер", local_telegram), ("Reddit", reddit),
                          ("Discord", discord), ("X · oEmbed", lambda: x_public(public_posts))]:
         try:
             found = reader()

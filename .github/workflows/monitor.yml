@@ -32,8 +32,10 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          TELEGRAM_EXPECTED_BOT: CryptoHunterBotai
           TELEGRAM_SOURCE_BOT_TOKEN: ${{ secrets.TELEGRAM_SOURCE_BOT_TOKEN }}
           TELEGRAM_PUBLIC_CHANNEL: ${{ vars.TELEGRAM_PUBLIC_CHANNEL }}
+          TELEGRAM_PUBLIC_CHANNELS: ${{ vars.TELEGRAM_PUBLIC_CHANNELS }}
           REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
           REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           REDDIT_USER_AGENT: ${{ secrets.REDDIT_USER_AGENT }}

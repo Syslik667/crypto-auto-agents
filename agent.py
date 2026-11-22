@@ -5,10 +5,8 @@ import json
 import os
 import pathlib
 import tempfile
-import urllib.parse
-import urllib.request
 
-from intelligence import airdrop_hunter, market_analyst, scam_detector, social_monitor
+from intelligence import airdrop_hunter, market_analyst, scam_detector, social_monitor, telegram_client, reward_guide
 from intelligence.net import blocked, canonical, failure, fetch
 from intelligence.reports import build_html, build_markdown
 from intelligence.social_monitor import SOURCES, parse_feed
@@ -48,27 +46,8 @@ def save(path, content):
         temp.unlink(missing_ok=True)
 
 
-def send_telegram(payload: dict) -> str:
-    token = os.environ.get('TELEGRAM_BOT_TOKEN', '').strip()
-    chat = os.environ.get('TELEGRAM_CHAT_ID', '').strip()
-    if not token or not chat:
-        return 'Не настроен (необязательно)'
-    msg = ('Crypto Auto Agents: ' + payload['time_utc'] + ' UTC\n' +
-           f"Новых публикаций: {len(payload['new'])}; реальный заработок: $0\n")
-    for c in payload['market']:
-        msg += f"{c['symbol']}: ${c['usd']} ({c['change24h']}% за 24ч)\n"
-    for x in payload['top']:
-        msg += '\n' + x['title'][:90] + '\n' + x['url']
-    data = urllib.parse.urlencode({'chat_id': chat, 'text': msg[:3950], 'disable_web_page_preview': 'true'}).encode()
-    url = 'https://api.telegram.org/bot' + token + '/sendMessage'
-    req = urllib.request.Request(url, data=data, method='POST')
-    try:
-        with urllib.request.urlopen(req, timeout=15) as rsp:
-            rsp.read(300)
-        return 'Отправлено'
-    except Exception as exc:
-        return f'Ошибка Telegram ({type(exc).__name__}), проверь secrets'
-
+def send_telegram(payload):
+    return telegram_client.notify(payload)
 
 
 def run():
@@ -131,6 +110,8 @@ def run():
         }
         item["published"] = str(airdrop_hunter.as_date(item["published"]) or "")
     latest = airdrop_hunter.rank(items)
+    for item in latest:
+        item["guide"] = reward_guide.build(item)
     new = [item for item in latest if seen.isdisjoint([item["id"], *item["aliases"]])]
     top = [item for item in new if item["eligible"]][:5]
     # Refresh retained IDs in observation order, including v1 hashes.

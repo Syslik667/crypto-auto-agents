@@ -30,7 +30,7 @@ def md_link(title, url):
 
 
 def build_markdown(p):
-    lines = ["# Crypto Intelligence v2", "", f"**{p['time_utc']} UTC** · Бюджет €0 · Заработано $0",
+    lines = ["# Crypto Cash Hunter v3", "", f"**{p['time_utc']} UTC** · Бюджет €0 · Заработано $0",
              "", "## TOP-5 новых возможностей", ""]
     if not p["top"]:
         lines.append("Новых публикаций, прошедших отбор, в этой проверке нет.")
@@ -65,8 +65,8 @@ def risk_block(risk):
 
 def build_html(p):
     parts = ['<!doctype html><html lang="ru"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">',
-             '<title>Crypto Intelligence v2</title><style>body{font:16px/1.55 system-ui;color:#172936;background:#f6f8fa;margin:2rem auto;max-width:62rem;padding:0 1rem}article,section{background:white;border:1px solid #cdd6dc;padding:1rem;margin:1rem 0;border-radius:.5rem}a{color:#17528a}code{overflow-wrap:anywhere}</style>',
-             "<main><h1>Crypto Intelligence v2</h1>", html.escape(p["time_utc"]) + " UTC · Заработано $0",
+             '<title>Crypto Cash Hunter v3</title><style>body{font:16px/1.55 system-ui;color:#172936;background:#f6f8fa;margin:2rem auto;max-width:62rem;padding:0 1rem}article,section{background:white;border:1px solid #cdd6dc;padding:1rem;margin:1rem 0;border-radius:.5rem}a{color:#17528a}code{overflow-wrap:anywhere}</style>',
+             "<main><h1>Crypto Cash Hunter v3</h1>", html.escape(p["time_utc"]) + " UTC · Заработано $0",
              "<h2>Рынок и публикации</h2><p>Изменение цены за 24 часа. Сопоставление с публикациями за сегодня и вчера по UTC. Причинная связь не установлена.</p>"]
     for c in p["market"]:
         parts.append("<article>" + link(c["name"], c["source"]) + " · " + price_line(c))
@@ -92,6 +92,11 @@ def build_html(p):
             parts.append("<p>" + " · ".join(link(k, v) for k, v in item["sources"].items()) + "</p>")
             if item["mentions"]:
                 parts.append("<p>Совпадающие ссылки — " + html.escape(", ".join(item["mentions"])) + "</p>")
+            guide = item.get("guide")
+            if guide:
+                parts.append("<h4>Получение награды вручную</h4><p>" + link("Публикация с условиями", guide["source"]) + "</p>")
+                parts.append("<ul>" + "".join("<li>" + html.escape(s) + "</li>" for s in guide["blockers"]) + "</ul>")
+                parts.append("<ol>" + "".join("<li>" + html.escape(s) + "</li>" for s in guide["steps"]) + "</ol>")
         parts.append("</article>")
     if not items:
         parts.append("<p>Возможностей в доступных источниках не найдено.</p>")
