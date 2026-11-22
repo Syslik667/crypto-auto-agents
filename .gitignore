@@ -2,6 +2,7 @@ __pycache__/
 *.pyc
 *.session
 *.session-*
+*.dpapi
 .env
 .env.*
 public-links.json

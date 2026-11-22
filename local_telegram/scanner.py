@@ -14,6 +14,7 @@ import sys
 import tempfile
 
 from intelligence.social_monitor import links, publisher_link
+from local_telegram import vault
 
 TOPICS = re.compile(r"crypto|airdrop|bitcoin|ethereum|blockchain|defi|finance|financial|invest|"
                     r"крипт|аирдроп|эйрдроп|биткоин|эфириум|блокчейн|финанс|инвест", re.I)
@@ -118,12 +119,15 @@ async def scan(client, channel_type, folder=None):
 async def run(login=False, folder="Крипта", show_chat_id=False):
     directory = private_directory()
     from telethon import TelegramClient, types
+    from telethon.sessions import StringSession
 
-    if not sys.stdin.isatty() and (login or not all(os.environ.get(k) for k in ("TELEGRAM_API_ID", "TELEGRAM_API_HASH"))):
+    saved = vault.load(directory) if os.name == "nt" else None
+    if not sys.stdin.isatty() and (login or (not saved and not all(os.environ.get(k) for k in ("TELEGRAM_API_ID", "TELEGRAM_API_HASH")))):
         raise SystemExit("Для первого входа нужен локальный терминал. Для фонового запуска передайте API ID и hash через окружение.")
-    api_id = int(os.environ.get("TELEGRAM_API_ID") or getpass.getpass("Telegram API ID: "))
-    api_hash = os.environ.get("TELEGRAM_API_HASH") or getpass.getpass("Telegram API hash: ")
-    client = TelegramClient(str(directory / "account"), api_id, api_hash,
+    api_id = saved["api_id"] if saved else int(os.environ.get("TELEGRAM_API_ID") or getpass.getpass("Telegram API ID: "))
+    api_hash = saved["api_hash"] if saved else os.environ.get("TELEGRAM_API_HASH") or getpass.getpass("Telegram API hash: ")
+    session = StringSession(saved["session"]) if saved else str(directory / "account")
+    client = TelegramClient(session, api_id, api_hash,
                             receive_updates=False, flood_sleep_threshold=0, request_retries=0)
     client.session.save_entities = False
     try:
@@ -135,6 +139,8 @@ async def run(login=False, folder="Крипта", show_chat_id=False):
                                    password=lambda: getpass.getpass("2FA password: "))
         if not await client.is_user_authorized():
             raise ValueError("Local login required")
+        if saved and client.session.save() != saved["session"]:
+            vault.save(directory, api_id, api_hash, client.session.save())
         if show_chat_id:
             print("Ваш ID для TELEGRAM_CHAT_ID:", (await client.get_me()).id)
         payload = await scan(client, types.Channel, folder)
