@@ -1,12 +1,12 @@
 {
-  "time_utc": "2026-11-22 09:05",
+  "time_utc": "2026-11-22 09:42",
   "market": [
     {
       "id": "bitcoin",
       "name": "Bitcoin",
       "symbol": "BTC",
-      "usd": 59709.0,
-      "change24h": 3.33745,
+      "usd": 60083.0,
+      "change24h": 3.84726,
       "source": "https://www.coingecko.com/en/coins/bitcoin",
       "news": []
     },
@@ -14,8 +14,8 @@
       "id": "ethereum",
       "name": "Ethereum",
       "symbol": "ETH",
-      "usd": 1685.14,
-      "change24h": 3.44937,
+      "usd": 1689.74,
+      "change24h": 3.32305,
       "source": "https://www.coingecko.com/en/coins/ethereum",
       "news": []
     },
@@ -23,8 +23,8 @@
       "id": "solana",
       "name": "Solana",
       "symbol": "SOL",
-      "usd": 69.8,
-      "change24h": 3.65263,
+      "usd": 69.86,
+      "change24h": 2.85714,
       "source": "https://www.coingecko.com/en/coins/solana",
       "news": []
     },
@@ -32,917 +32,57 @@
       "id": "weth",
       "name": "Weth",
       "symbol": "WETH",
-      "usd": 1683.79,
-      "change24h": 3.49197,
+      "usd": 1689.66,
+      "change24h": 3.43643,
       "source": "https://www.coingecko.com/en/coins/weth",
       "news": []
     }
   ],
-  "new": [
-    {
-      "id": "f0bf85ce98e4ca6c4c",
-      "title": "Treasury Staking Initiative",
-      "source": "Ethereum Foundation",
-      "url": "https://blog.ethereum.org/en/2026/02/24/staking",
-      "official": true,
-      "published": "2026-02-24",
-      "terms": {
-        "Участие": "упоминается стейкинг",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "вид и стоимость не подтверждены"
-      },
-      "token": null,
-      "sources": {
-        "Ethereum Foundation": "https://blog.ethereum.org/en/2026/02/24/staking"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна",
-        "Участие — упоминается стейкинг"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "Ethereum Foundation": "https://blog.ethereum.org/en/2026/02/24/staking"
-        }
-      },
-      "selection": "официальная публикация, указано условий 1 из 6",
-      "eligible": false,
-      "score": 11,
-      "summary": "Участие — упоминается стейкинг. Награда — вид и стоимость не подтверждены"
-    },
-    {
-      "id": "1ab21e36103a848cb4",
-      "title": "Arcus Airdrop",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/arcus-exchange-robinhood-chain",
-      "official": false,
-      "published": "2026-10-20",
-      "terms": {
-        "Участие": "торговая активность",
-        "Депозит": "заявлено без депозита",
-        "Комиссии": "не указано",
-        "KYC": "заявлено без KYC",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "points · денежная сумма не установлена"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/arcus-exchange-robinhood-chain"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна",
-        "упоминаются ставки, деривативы или платная торговая активность",
-        "Участие — торговая активность"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/arcus-exchange-robinhood-chain"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён, указано условий 3 из 6, источник заявляет участие без депозита",
-      "eligible": false,
-      "score": 5,
-      "summary": "Участие — торговая активность. Депозит — заявлено без депозита. KYC — заявлено без KYC. Награда — points · денежная сумма не установлена"
-    },
-    {
-      "id": "25aa1c022920bd9168",
-      "title": "OWNIT Prop Trading Firm",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/ownit-prop-trading-firm",
-      "official": false,
-      "published": "2026-11-14",
-      "terms": {
-        "Участие": "не указано",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "требуется",
-        "Германия": "не указано",
-        "Вывод": "ограничен",
-        "Окончание": "не указано",
-        "Награда": "вид и стоимость не подтверждены"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/ownit-prop-trading-firm"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "упоминаются ставки, деривативы или платная торговая активность",
-        "Вывод — ограничен"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/ownit-prop-trading-firm"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён, указано условий 2 из 6",
-      "eligible": false,
-      "score": 2,
-      "summary": "KYC — требуется. Вывод — ограничен. Награда — вид и стоимость не подтверждены"
-    },
-    {
-      "id": "cc52fd24be99ae30cb",
-      "title": "Teller DeFi Protocol",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/teller-defi-protocol",
-      "official": false,
-      "published": "2026-11-06",
-      "terms": {
-        "Участие": "упоминается стейкинг",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "points · денежная сумма не установлена"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/teller-defi-protocol"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна",
-        "Участие — упоминается стейкинг"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/teller-defi-protocol"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
-      "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена"
-    },
-    {
-      "id": "bafb545d922597b632",
-      "title": "Bybit WSOT 2026",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/bybit-wsot-2026",
-      "official": false,
-      "published": "2026-10-29",
-      "terms": {
-        "Участие": "торговая активность",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "2026-11-19",
-        "Награда": "points · денежная сумма не установлена"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/bybit-wsot-2026"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна",
-        "срок завершён",
-        "упоминаются ставки, деривативы или платная торговая активность",
-        "Участие — торговая активность"
-      ],
-      "expired": true,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/bybit-wsot-2026"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
-      "eligible": false,
-      "score": 1,
-      "summary": "Участие — торговая активность. Окончание — 2026-11-19. Награда — points · денежная сумма не установлена"
-    },
-    {
-      "id": "a5edf563b988392b9b",
-      "title": "XStable",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/xstable-ai",
-      "official": false,
-      "published": "2026-10-25",
-      "terms": {
-        "Участие": "торговая активность",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "points · денежная сумма не установлена"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/xstable-ai"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна",
-        "упоминаются ставки, деривативы или платная торговая активность",
-        "Участие — торговая активность"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/xstable-ai"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
-      "eligible": false,
-      "score": 1,
-      "summary": "Участие — торговая активность. Награда — points · денежная сумма не установлена"
-    },
-    {
-      "id": "b6de9bf61c7409ca40",
-      "title": "MINT Rewards & Airdrop",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/mint-casino",
-      "official": false,
-      "published": "2026-10-24",
-      "terms": {
-        "Участие": "упоминается стейкинг",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "вид и стоимость не подтверждены"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/mint-casino"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна",
-        "упоминаются ставки, деривативы или платная торговая активность",
-        "Участие — упоминается стейкинг"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/mint-casino"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
-      "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — вид и стоимость не подтверждены"
-    },
-    {
-      "id": "b5007c99afaef71471",
-      "title": "Nullmask Airdrop",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/nullmask",
-      "official": false,
-      "published": "2026-10-22",
-      "terms": {
-        "Участие": "не указано",
-        "Депозит": "не указано",
-        "Комиссии": "заявлено без комиссии",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "2027-01-17",
-        "Награда": "points · денежная сумма не установлена"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/nullmask"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/nullmask"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
-      "eligible": false,
-      "score": 1,
-      "summary": "Комиссии — заявлено без комиссии. Окончание — 2027-01-17. Награда — points · денежная сумма не установлена"
-    },
-    {
-      "id": "d86f6736ddccd22765",
-      "title": "NOWA Finance Airdrop",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/nowa-finance-devnet",
-      "official": false,
-      "published": "2026-10-21",
-      "terms": {
-        "Участие": "торговая активность / упоминается стейкинг",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "вид и стоимость не подтверждены"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/nowa-finance-devnet"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна",
-        "Участие — торговая активность / упоминается стейкинг"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/nowa-finance-devnet"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
-      "eligible": false,
-      "score": 1,
-      "summary": "Участие — торговая активность / упоминается стейкинг. Награда — вид и стоимость не подтверждены"
-    },
-    {
-      "id": "f467b74496ed49ce43",
-      "title": "Bullshot Airdrop",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/bullshot-memecoin-launchpad",
-      "official": false,
-      "published": "2026-10-18",
-      "terms": {
-        "Участие": "упоминается стейкинг",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "points / xp · денежная сумма не установлена"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/bullshot-memecoin-launchpad"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна",
-        "Участие — упоминается стейкинг"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/bullshot-memecoin-launchpad"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
-      "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — points / xp · денежная сумма не установлена"
-    },
-    {
-      "id": "6c336e49e70743796d",
-      "title": "Pump.Fun $50 Referral",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/pump-fun-referral-rewards",
-      "official": false,
-      "published": "2026-10-17",
-      "terms": {
-        "Участие": "упоминается стейкинг",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "вид и стоимость не подтверждены"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/pump-fun-referral-rewards"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна",
-        "упоминаются ставки, деривативы или платная торговая активность",
-        "Участие — упоминается стейкинг"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/pump-fun-referral-rewards"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
-      "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — вид и стоимость не подтверждены"
-    },
-    {
-      "id": "ad07ba68cef6aff23e",
-      "title": "BiggerZ Casino & Sportsbook",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/biggerz-casino",
-      "official": false,
-      "published": "2026-10-16",
-      "terms": {
-        "Участие": "не указано",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "требуется",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "вид и стоимость не подтверждены"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/biggerz-casino"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна",
-        "упоминаются ставки, деривативы или платная торговая активность"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/biggerz-casino"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
-      "eligible": false,
-      "score": 1,
-      "summary": "KYC — требуется. Награда — вид и стоимость не подтверждены"
-    },
-    {
-      "id": "8c854b6b6b97a840c9",
-      "title": "NUVA Finance Airdrop",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/nuva-finance",
-      "official": false,
-      "published": "2026-10-15",
-      "terms": {
-        "Участие": "упоминается стейкинг",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "points · денежная сумма не установлена"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/nuva-finance"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна",
-        "Участие — упоминается стейкинг"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/nuva-finance"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
-      "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена"
-    },
-    {
-      "id": "66f308acf47333e16f",
-      "title": "Xyper Market Airdrop",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/xyper-market",
-      "official": false,
-      "published": "2026-10-29",
-      "terms": {
-        "Участие": "не указано",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "points · денежная сумма не установлена"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/xyper-market"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/xyper-market"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён",
-      "eligible": false,
-      "score": 0,
-      "summary": "Награда — points · денежная сумма не установлена"
-    },
-    {
-      "id": "db1c00ef6c393065c4",
-      "title": "Robinhood Crypto Sweepstakes",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/robinhood-crypto-sweepstakes",
-      "official": false,
-      "published": "2026-10-28",
-      "terms": {
-        "Участие": "не указано",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "2026-11-22",
-        "Награда": "вид и стоимость не подтверждены"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/robinhood-crypto-sweepstakes"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/robinhood-crypto-sweepstakes"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён",
-      "eligible": false,
-      "score": 0,
-      "summary": "Окончание — 2026-11-22. Награда — вид и стоимость не подтверждены"
-    },
-    {
-      "id": "77243f96f5633e6047",
-      "title": "SOEI Airdrop",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/soei",
-      "official": false,
-      "published": "2026-10-27",
-      "terms": {
-        "Участие": "не указано",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "points · денежная сумма не установлена"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/soei"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/soei"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён",
-      "eligible": false,
-      "score": 0,
-      "summary": "Награда — points · денежная сумма не установлена"
-    },
-    {
-      "id": "733afff70b8d7e090d",
-      "title": "Flop Network Airdrop",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/flop-network-genesis",
-      "official": false,
-      "published": "2026-10-26",
-      "terms": {
-        "Участие": "не указано",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "вид и стоимость не подтверждены"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/flop-network-genesis"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/flop-network-genesis"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён",
-      "eligible": false,
-      "score": 0,
-      "summary": "Награда — вид и стоимость не подтверждены"
-    },
-    {
-      "id": "37fbe220ad58b977f9",
-      "title": "xStocks Airdrop",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/xstocks",
-      "official": false,
-      "published": "2026-10-26",
-      "terms": {
-        "Участие": "не указано",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "points · денежная сумма не установлена"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/xstocks"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/xstocks"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён",
-      "eligible": false,
-      "score": 0,
-      "summary": "Награда — points · денежная сумма не установлена"
-    },
-    {
-      "id": "beea9a354324c65395",
-      "title": "NoahAI Airdrop",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/noahai",
-      "official": false,
-      "published": "2026-10-22",
-      "terms": {
-        "Участие": "не указано",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "2026-10-28",
-        "Награда": "points · денежная сумма не установлена"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/noahai"
-      },
-      "mentions": [],
-      "status": "Условия не проверены",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна",
-        "срок завершён"
-      ],
-      "expired": true,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/noahai"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён",
-      "eligible": false,
-      "score": 0,
-      "summary": "Окончание — 2026-10-28. Награда — points · денежная сумма не установлена"
-    },
-    {
-      "id": "777678ebf0fea2ffbb",
-      "title": "Fhenix Airdrop",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/fhenix",
-      "official": false,
-      "published": "2026-10-19",
-      "terms": {
-        "Участие": "не указано",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "вид и стоимость не подтверждены"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/fhenix"
-      },
-      "mentions": [],
-      "status": "Условия не проверены",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/fhenix"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён",
-      "eligible": false,
-      "score": 0,
-      "summary": "Награда — вид и стоимость не подтверждены"
-    },
-    {
-      "id": "3d14232118b9a67590",
-      "title": "Metric Liquidity Rewards",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/metric-dex",
-      "official": false,
-      "published": "2026-10-19",
-      "terms": {
-        "Участие": "не указано",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "не указано",
-        "Окончание": "не указано",
-        "Награда": "points · денежная сумма не установлена"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/metric-dex"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "дата публикации вне последних 14 дней или неизвестна"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/metric-dex"
-        }
-      },
-      "selection": "публикация каталога, первоисточник не подтверждён",
-      "eligible": false,
-      "score": 0,
-      "summary": "Награда — points · денежная сумма не установлена"
-    }
-  ],
+  "new": [],
   "latest": [
     {
+      "id": "59b5220454a342b8c7",
+      "title": "Get up to $100 in BTC with our Black Friday Deposit & Trade Bonus",
+      "source": "Kraken (официальный блог)",
+      "url": "https://blog.kraken.com/product/promotions/black-friday-deposit-trade-bonus",
+      "official": true,
+      "published": "2026-11-12",
+      "terms": {
+        "Участие": "не указано",
+        "Депозит": "требуется",
+        "Комиссии": "не указано",
+        "KYC": "не указано",
+        "Германия": "не указано",
+        "Вывод": "не указано",
+        "Окончание": "не указано",
+        "Награда": "вид и стоимость не подтверждены"
+      },
+      "token": null,
+      "sources": {
+        "Kraken (официальный блог)": "https://blog.kraken.com/product/promotions/black-friday-deposit-trade-bonus"
+      },
+      "mentions": [],
+      "status": "Возможны платные условия",
+      "exclusions": [
+        "Депозит — требуется"
+      ],
+      "expired": false,
+      "risk": {
+        "status": "Недостаточно данных",
+        "reasons": [
+          "В первоисточнике не установлена пара сеть/адрес",
+          "Условия акции и ссылки для получения награды требуют ручной проверки"
+        ],
+        "sources": {
+          "Kraken (официальный блог)": "https://blog.kraken.com/product/promotions/black-friday-deposit-trade-bonus"
+        }
+      },
+      "summary": "Депозит — требуется. Награда — вид и стоимость не подтверждены",
+      "selection": "официальная публикация, указано условий 1 из 6",
+      "eligible": false,
+      "score": 11
+    },
+    {
       "id": "f0bf85ce98e4ca6c4c",
       "title": "Treasury Staking Initiative",
       "source": "Ethereum Foundation",
@@ -980,10 +120,50 @@
           "Ethereum Foundation": "https://blog.ethereum.org/en/2026/02/24/staking"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Награда — вид и стоимость не подтверждены",
       "selection": "официальная публикация, указано условий 1 из 6",
       "eligible": false,
-      "score": 11,
-      "summary": "Участие — упоминается стейкинг. Награда — вид и стоимость не подтверждены"
+      "score": 11
+    },
+    {
+      "id": "d47d5c9f62117009a0",
+      "title": "The Anthropic Pre-IPO Challenge: compete for $20,000 in ANTHROPICX on Kraken Pro",
+      "source": "Kraken (официальный блог)",
+      "url": "https://blog.kraken.com/product/promotions/the-anthropic-pre-ipo-challenge-nov-2026",
+      "official": true,
+      "published": "2026-11-11",
+      "terms": {
+        "Участие": "не указано",
+        "Депозит": "не указано",
+        "Комиссии": "не указано",
+        "KYC": "не указано",
+        "Германия": "не указано",
+        "Вывод": "не указано",
+        "Окончание": "не указано",
+        "Награда": "вид и стоимость не подтверждены"
+      },
+      "token": null,
+      "sources": {
+        "Kraken (официальный блог)": "https://blog.kraken.com/product/promotions/the-anthropic-pre-ipo-challenge-nov-2026"
+      },
+      "mentions": [],
+      "status": "Возможны платные условия",
+      "exclusions": [],
+      "expired": false,
+      "risk": {
+        "status": "Недостаточно данных",
+        "reasons": [
+          "В первоисточнике не установлена пара сеть/адрес",
+          "Условия акции и ссылки для получения награды требуют ручной проверки"
+        ],
+        "sources": {
+          "Kraken (официальный блог)": "https://blog.kraken.com/product/promotions/the-anthropic-pre-ipo-challenge-nov-2026"
+        }
+      },
+      "summary": "Награда — вид и стоимость не подтверждены",
+      "selection": "официальная публикация",
+      "eligible": true,
+      "score": 10
     },
     {
       "id": "1ab21e36103a848cb4",
@@ -1024,10 +204,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/arcus-exchange-robinhood-chain"
         }
       },
+      "summary": "Участие — торговая активность. Депозит — заявлено без депозита. KYC — заявлено без KYC. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 3 из 6, источник заявляет участие без депозита",
       "eligible": false,
-      "score": 5,
-      "summary": "Участие — торговая активность. Депозит — заявлено без депозита. KYC — заявлено без KYC. Награда — points · денежная сумма не установлена"
+      "score": 5
     },
     {
       "id": "bd664a82bbd0270b96",
@@ -1067,10 +247,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/zeruai-zap-markets"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Депозит — заявлено без депозита. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 2 из 6, источник заявляет участие без депозита",
       "eligible": false,
-      "score": 4,
-      "summary": "Участие — упоминается стейкинг. Депозит — заявлено без депозита. Награда — points · денежная сумма не установлена"
+      "score": 4
     },
     {
       "id": "25aa1c022920bd9168",
@@ -1110,10 +290,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/ownit-prop-trading-firm"
         }
       },
+      "summary": "KYC — требуется. Вывод — ограничен. Награда — вид и стоимость не подтверждены",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 2 из 6",
       "eligible": false,
-      "score": 2,
-      "summary": "KYC — требуется. Вывод — ограничен. Награда — вид и стоимость не подтверждены"
+      "score": 2
     },
     {
       "id": "2d90b4134da0085b1a",
@@ -1154,10 +334,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/kraken-black-friday-bonus"
         }
       },
+      "summary": "Участие — торговая активность / упоминается стейкинг. Депозит — требуется. Окончание — 2027-01-01. Награда — вид и стоимость не подтверждены",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 2 из 6",
       "eligible": false,
-      "score": 2,
-      "summary": "Участие — торговая активность / упоминается стейкинг. Депозит — требуется. Окончание — 2027-01-01. Награда — вид и стоимость не подтверждены"
+      "score": 2
     },
     {
       "id": "a23bc39edb311ebb8d",
@@ -1197,10 +377,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/arch-prime-waitlist"
         }
       },
+      "summary": "Участие — запись в лист ожидания / упоминается стейкинг. Депозит — требуется. Награда — points / waitlist · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 2 из 6",
       "eligible": false,
-      "score": 2,
-      "summary": "Участие — запись в лист ожидания / упоминается стейкинг. Депозит — требуется. Награда — points / waitlist · денежная сумма не установлена"
+      "score": 2
     },
     {
       "id": "1b9aee243dfebfef7a",
@@ -1239,10 +419,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/onre-finance"
         }
       },
+      "summary": "Депозит — требуется. KYC — заявлено без KYC. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 2 из 6",
       "eligible": false,
-      "score": 2,
-      "summary": "Депозит — требуется. KYC — заявлено без KYC. Награда — points · денежная сумма не установлена"
+      "score": 2
     },
     {
       "id": "6b46a4ca01f71419f1",
@@ -1282,10 +462,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/inverted-lambda"
         }
       },
+      "summary": "Комиссии — заявлено без комиссии. Вывод — ограничен. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 2 из 6",
       "eligible": false,
-      "score": 2,
-      "summary": "Комиссии — заявлено без комиссии. Вывод — ограничен. Награда — points · денежная сумма не установлена"
+      "score": 2
     },
     {
       "id": "838aa45206966c7c4c",
@@ -1326,10 +506,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/ryfinite"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Вывод — ограничен. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 2 из 6",
       "eligible": false,
-      "score": 2,
-      "summary": "Участие — упоминается стейкинг. Вывод — ограничен. Награда — points · денежная сумма не установлена"
+      "score": 2
     },
     {
       "id": "7e480534ac4e527c34",
@@ -1369,10 +549,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/variational-on-chain-trader-rewards"
         }
       },
+      "summary": "Участие — торговая активность. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — торговая активность. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "20e4a2eb11bab4d6b5",
@@ -1411,10 +591,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/daejin"
         }
       },
+      "summary": "Участие — торговая активность. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — торговая активность. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "17b4e9405faaa4c134",
@@ -1453,10 +633,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/tzero-testnet"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "e818a626ff85c5c9f4",
@@ -1495,10 +675,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/panther-protocol"
         }
       },
+      "summary": "Вывод — ограничен. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Вывод — ограничен. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "25b1a2898b46f9efce",
@@ -1537,10 +717,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/antseed"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "1d20a6689b5b2b0458",
@@ -1579,10 +759,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/aura-protocol-testnet"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Окончание — 2026-11-30. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Окончание — 2026-11-30. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "9640f8a7333ead342d",
@@ -1622,10 +802,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/risex"
         }
       },
+      "summary": "Участие — торговая активность. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — торговая активность. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "594a2b4768e58ecf1b",
@@ -1664,10 +844,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/kleos-elysium-launchpad"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "6dc628be93c47a1bc4",
@@ -1706,10 +886,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/loopscale"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "b4fd85344ba298cc90",
@@ -1748,10 +928,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/ascend-elysium-launchpad"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "a4fc4222c589d2d7d7",
@@ -1790,10 +970,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/kalos-fun"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "5c4976d9030677be5c",
@@ -1832,10 +1012,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/raycash"
         }
       },
+      "summary": "Вывод — ограничен. Награда — points / waitlist · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Вывод — ограничен. Награда — points / waitlist · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "db3c37f9878cb75ad1",
@@ -1874,10 +1054,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/elysium-mainnet"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "cc52fd24be99ae30cb",
@@ -1917,10 +1097,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/teller-defi-protocol"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "04c09fd8d2189d56cb",
@@ -1961,10 +1141,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/polymarket-perps-trading-competition"
         }
       },
+      "summary": "Участие — торговая активность. Награда — вид и стоимость не подтверждены",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — торговая активность. Награда — вид и стоимость не подтверждены"
+      "score": 1
     },
     {
       "id": "8a19a27b095df602af",
@@ -2004,10 +1184,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/squeekchain"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "5d02726634790210a0",
@@ -2047,10 +1227,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/memebitcoin"
         }
       },
+      "summary": "Депозит — требуется. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Депозит — требуется. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "da4563fe8bd269e100",
@@ -2091,10 +1271,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/okx-flash-earn"
         }
       },
+      "summary": "Участие — торговая активность / упоминается стейкинг. Награда — вид и стоимость не подтверждены",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — торговая активность / упоминается стейкинг. Награда — вид и стоимость не подтверждены"
+      "score": 1
     },
     {
       "id": "bafb545d922597b632",
@@ -2136,10 +1316,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/bybit-wsot-2026"
         }
       },
+      "summary": "Участие — торговая активность. Окончание — 2026-11-19. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — торговая активность. Окончание — 2026-11-19. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "a5edf563b988392b9b",
@@ -2180,10 +1360,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/xstable-ai"
         }
       },
+      "summary": "Участие — торговая активность. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — торговая активность. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "b6de9bf61c7409ca40",
@@ -2224,10 +1404,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/mint-casino"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Награда — вид и стоимость не подтверждены",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — вид и стоимость не подтверждены"
+      "score": 1
     },
     {
       "id": "b5007c99afaef71471",
@@ -2266,10 +1446,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/nullmask"
         }
       },
+      "summary": "Комиссии — заявлено без комиссии. Окончание — 2027-01-17. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Комиссии — заявлено без комиссии. Окончание — 2027-01-17. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "d86f6736ddccd22765",
@@ -2309,10 +1489,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/nowa-finance-devnet"
         }
       },
+      "summary": "Участие — торговая активность / упоминается стейкинг. Награда — вид и стоимость не подтверждены",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — торговая активность / упоминается стейкинг. Награда — вид и стоимость не подтверждены"
+      "score": 1
     },
     {
       "id": "f467b74496ed49ce43",
@@ -2352,10 +1532,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/bullshot-memecoin-launchpad"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Награда — points / xp · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — points / xp · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "6c336e49e70743796d",
@@ -2396,10 +1576,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/pump-fun-referral-rewards"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Награда — вид и стоимость не подтверждены",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — вид и стоимость не подтверждены"
+      "score": 1
     },
     {
       "id": "ad07ba68cef6aff23e",
@@ -2439,10 +1619,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/biggerz-casino"
         }
       },
+      "summary": "KYC — требуется. Награда — вид и стоимость не подтверждены",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "KYC — требуется. Награда — вид и стоимость не подтверждены"
+      "score": 1
     },
     {
       "id": "8c854b6b6b97a840c9",
@@ -2482,10 +1662,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/nuva-finance"
         }
       },
+      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
       "eligible": false,
-      "score": 1,
-      "summary": "Участие — упоминается стейкинг. Награда — points · денежная сумма не установлена"
+      "score": 1
     },
     {
       "id": "27b21fe805e4b38c23",
@@ -2522,10 +1702,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/geton-waitlist"
         }
       },
+      "summary": "Награда — points / waitlist · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён",
       "eligible": true,
-      "score": 0,
-      "summary": "Награда — points / waitlist · денежная сумма не установлена"
+      "score": 0
     },
     {
       "id": "dc891841dcaa5743a8",
@@ -2562,10 +1742,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/decentralized-intelligence"
         }
       },
+      "summary": "Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён",
       "eligible": true,
-      "score": 0,
-      "summary": "Награда — points · денежная сумма не установлена"
+      "score": 0
     },
     {
       "id": "8981b60b4840fc238b",
@@ -2602,10 +1782,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/gomining-bitcoin-mining-platform"
         }
       },
+      "summary": "Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён",
       "eligible": true,
-      "score": 0,
-      "summary": "Награда — points · денежная сумма не установлена"
+      "score": 0
     },
     {
       "id": "9dac6581e71c72493b",
@@ -2644,10 +1824,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/zoi-network"
         }
       },
+      "summary": "Награда — вид и стоимость не подтверждены",
       "selection": "публикация каталога, первоисточник не подтверждён",
       "eligible": false,
-      "score": 0,
-      "summary": "Награда — вид и стоимость не подтверждены"
+      "score": 0
     },
     {
       "id": "14e4f4ce8a546ec563",
@@ -2687,10 +1867,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/degen-tips-ecosystem"
         }
       },
+      "summary": "Награда — вид и стоимость не подтверждены",
       "selection": "публикация каталога, первоисточник не подтверждён",
       "eligible": false,
-      "score": 0,
-      "summary": "Награда — вид и стоимость не подтверждены"
+      "score": 0
     },
     {
       "id": "f31fe945074b695ec5",
@@ -2730,10 +1910,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/smartx-terminal-waitlist"
         }
       },
+      "summary": "Награда — waitlist · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён",
       "eligible": false,
-      "score": 0,
-      "summary": "Награда — waitlist · денежная сумма не установлена"
+      "score": 0
     },
     {
       "id": "0ce81da96534418b5e",
@@ -2772,10 +1952,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/incentiv"
         }
       },
+      "summary": "Окончание — 2026-11-30. Награда — xp · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён",
       "eligible": false,
-      "score": 0,
-      "summary": "Окончание — 2026-11-30. Награда — xp · денежная сумма не установлена"
+      "score": 0
     },
     {
       "id": "66f308acf47333e16f",
@@ -2814,10 +1994,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/xyper-market"
         }
       },
+      "summary": "Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён",
       "eligible": false,
-      "score": 0,
-      "summary": "Награда — points · денежная сумма не установлена"
+      "score": 0
     },
     {
       "id": "db1c00ef6c393065c4",
@@ -2856,10 +2036,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/robinhood-crypto-sweepstakes"
         }
       },
+      "summary": "Окончание — 2026-11-22. Награда — вид и стоимость не подтверждены",
       "selection": "публикация каталога, первоисточник не подтверждён",
       "eligible": false,
-      "score": 0,
-      "summary": "Окончание — 2026-11-22. Награда — вид и стоимость не подтверждены"
+      "score": 0
     },
     {
       "id": "77243f96f5633e6047",
@@ -2898,10 +2078,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/soei"
         }
       },
+      "summary": "Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён",
       "eligible": false,
-      "score": 0,
-      "summary": "Награда — points · денежная сумма не установлена"
+      "score": 0
     },
     {
       "id": "733afff70b8d7e090d",
@@ -2940,10 +2120,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/flop-network-genesis"
         }
       },
+      "summary": "Награда — вид и стоимость не подтверждены",
       "selection": "публикация каталога, первоисточник не подтверждён",
       "eligible": false,
-      "score": 0,
-      "summary": "Награда — вид и стоимость не подтверждены"
+      "score": 0
     },
     {
       "id": "37fbe220ad58b977f9",
@@ -2982,10 +2162,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/xstocks"
         }
       },
+      "summary": "Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён",
       "eligible": false,
-      "score": 0,
-      "summary": "Награда — points · денежная сумма не установлена"
+      "score": 0
     },
     {
       "id": "beea9a354324c65395",
@@ -3025,10 +2205,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/noahai"
         }
       },
+      "summary": "Окончание — 2026-10-28. Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён",
       "eligible": false,
-      "score": 0,
-      "summary": "Окончание — 2026-10-28. Награда — points · денежная сумма не установлена"
+      "score": 0
     },
     {
       "id": "777678ebf0fea2ffbb",
@@ -3067,10 +2247,10 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/fhenix"
         }
       },
+      "summary": "Награда — вид и стоимость не подтверждены",
       "selection": "публикация каталога, первоисточник не подтверждён",
       "eligible": false,
-      "score": 0,
-      "summary": "Награда — вид и стоимость не подтверждены"
+      "score": 0
     },
     {
       "id": "3d14232118b9a67590",
@@ -3109,17 +2289,17 @@
           "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/metric-dex"
         }
       },
+      "summary": "Награда — points · денежная сумма не установлена",
       "selection": "публикация каталога, первоисточник не подтверждён",
       "eligible": false,
-      "score": 0,
-      "summary": "Награда — points · денежная сумма не установлена"
+      "score": 0
     }
   ],
   "top": [],
   "health": {
     "CoinGecko": "OK",
     "AirdropAlert (каталог, НЕ подтверждение)": "OK · публикаций 50",
-    "Kraken (официальный блог)": "URLError",
+    "Kraken (официальный блог)": "OK · публикаций 10",
     "Coinbase (официальный блог)": "HTTP 403",
     "Ethereum Foundation": "OK · публикаций 50",
     "Bitfinex (официальный блог)": "OK · публикаций 50",
@@ -3140,8 +2320,8 @@
         "Chainabuse · не подключён для этой сети",
         "GoPlus · крупнейшая доля в выборке 13.9% (включая контракты)",
         "GoPlus · проверены доступные признаки контракта",
-        "DEX Screener · крупнейший наблюдаемый пул $69,518,279",
-        "DeFiLlama · справочная цена $1683.79"
+        "DEX Screener · крупнейший наблюдаемый пул $69,738,248",
+        "DeFiLlama · справочная цена $1688.48"
       ],
       "sources": {
         "GoPlus": "https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
