@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="game-token" content="__LOCAL_TOKEN__">
+  <title>Game Reward Agent · Crypto Cash Hunter</title>
+  <link rel="stylesheet" href="/app.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="frame topbar-inner">
+      <a class="brand" href="#offers"><span class="brand-mark" aria-hidden="true">✦</span><span>Game Reward Agent <small>v6</small></span></a>
+      <nav aria-label="Разделы">
+        <button class="tab" type="button" data-view="offers" aria-current="page">Задания</button>
+        <button class="tab" type="button" data-view="journal">Журнал</button>
+        <button class="tab" type="button" data-view="sources">Источники</button>
+      </nav>
+    </div>
+  </header>
+  <main class="frame">
+    <section class="page-head">
+      <div><div class="scope"><span class="dot"></span>Германия · локальные данные</div>
+        <h1 id="page-title">Игровые задания</h1>
+      </div>
+      <div class="actions">
+        <button class="button secondary" id="send-telegram" type="button">Напоминания в Telegram</button>
+        <button class="button primary" id="new-offer" type="button"><span aria-hidden="true">＋</span> Добавить оффер</button>
+      </div>
+    </section>
+    <p id="notice" class="notice" role="status" hidden></p>
+    <section id="offers" class="view" aria-labelledby="page-title">
+      <div id="totals" class="totals" aria-label="Награды"></div>
+      <section class="list-head" aria-label="Поиск по заданиям">
+        <div><h2>Список офферов</h2><p id="match-count" class="muted"></p></div>
+        <div class="filters">
+          <input id="search" type="search" placeholder="Поиск по игре или этапу" aria-label="Поиск по игре или этапу">
+          <select id="platform-filter" aria-label="Площадка"><option value="">Все площадки</option></select>
+          <label class="toggle"><input type="checkbox" id="zero-filter"> Без вложений</label>
+          <label class="toggle"><input type="checkbox" id="ready-filter"> Сверено</label>
+          <label class="file-button">Импорт JSON<input id="import-json" type="file" accept=".json,application/json"></label>
+        </div>
+      </section>
+      <div id="offer-list" class="offer-list"></div>
+      <section class="empty" id="empty" hidden>
+        <span class="empty-icon" aria-hidden="true">↳</span><h2 id="empty-title">Пока нет офферов</h2>
+        <p id="empty-hint">Перенесите требования игры из личного кабинета или импортируйте файл.</p>
+        <button class="button secondary" id="empty-add" type="button">Добавить вручную</button>
+      </section>
+    </section>
+    <section id="journal" class="view" hidden>
+      <h2>Причины отклонения</h2>
+      <div class="panel" id="journal-list"></div>
+    </section>
+    <section id="sources" class="view" hidden>
+      <div class="list-head"><div><h2>Официальные справки</h2><p class="muted">Личные предложения импортируются из кабинета вручную.</p></div>
+        <button class="button secondary" id="check-sources" type="button">Проверить доступ</button></div>
+      <div class="source-grid" id="source-list"></div>
+    </section>
+  </main>
+  <dialog id="offer-dialog" aria-labelledby="form-title">
+    <form id="offer-form">
+      <div class="dialog-head"><h2 id="form-title">Добавить оффер</h2><button class="close" type="button" data-close aria-label="Закрыть">×</button></div>
+      <div class="form-body">
+        <fieldset><legend>Оффер</legend><div class="form-grid">
+          <label>Площадка<select name="platform" required></select></label>
+          <label>Название игры<input name="title" maxlength="120" required></label>
+          <label>Официальная ссылка<input name="url" type="url" maxlength="500" placeholder="https://…"></label>
+          <label>ID оффера, если виден<input name="external_id" maxlength="60"></label>
+          <label>Устройство<select name="device"><option value="unknown">Неизвестно</option><option value="android">Android</option><option value="ios">iOS</option><option value="pc">ПК</option><option value="any">Любое</option></select></label>
+          <label>Доступ в Германии<select name="germany" data-choice></select></label>
+          <label>Игру уже устанавливали<select name="prior_install" data-choice></select></label>
+          <label>Валюта награды<select name="currency" data-currency></select></label>
+        </div></fieldset>
+        <fieldset><legend>Условия и вывод</legend><div class="form-grid">
+          <label>Депозит обязателен<select name="deposit" data-choice></select></label>
+          <label>Покупки обязательны<select name="purchase" data-choice></select></label>
+          <label>Нужен KYC<select name="kyc" data-choice></select></label>
+          <label>Комиссия<select name="fee_mode"><option value="unknown">Неизвестно</option><option value="none">Нет</option><option value="deducted">Удерживается из выплаты</option><option value="upfront">Платится заранее</option></select></label>
+          <label>Размер комиссии<input name="fee" inputmode="decimal"></label>
+          <label>Суммарные обязательные расходы<input name="cost" inputmode="decimal"></label>
+          <label>Минимум вывода<input name="minimum" inputmode="decimal"></label>
+          <label>Способ вывода<input name="payout_method" maxlength="120" placeholder="Например, PayPal"></label>
+          <label>Дата конца<input name="deadline" type="date"></label>
+          <label>Дней от установки<input name="days" type="number" min="1" max="365"></label>
+        </div></fieldset>
+        <fieldset><legend>Оценка времени и доходности</legend><div class="form-grid">
+          <label>Минимум минут<input name="minutes_min" type="number" min="1" max="100000"></label>
+          <label>Максимум минут<input name="minutes_max" type="number" min="1" max="100000"></label>
+          <label>Вероятность выполнения, %<input name="probability" type="number" min="0" max="100"></label>
+          <label>EUR за единицу другой валюты<input name="rate_eur" inputmode="decimal" placeholder="Ручной курс"></label>
+        </div><p class="field-hint">Укажите собственную оценку. Для EUR курс уже равен 1.</p></fieldset>
+        <fieldset><legend>Оплачиваемые этапы</legend><div id="milestone-inputs"></div>
+          <button class="button secondary compact" type="button" id="add-step">＋ Этап</button>
+        </fieldset>
+        <fieldset><legend>Материалы для проверки</legend>
+          <label>Точные условия и заметки<textarea name="notes" rows="3" maxlength="900"></textarea></label>
+          <label>Скриншот оффера <small>PNG, JPEG или WebP до 3 МБ</small><input id="offer-file" type="file" accept="image/png,image/jpeg,image/webp"></label>
+          <p class="field-hint">Обрежьте имя, баланс аккаунта, email и другие личные данные. Перенесите условия в форму.</p>
+          <img id="preview" alt="Предпросмотр скриншота оффера" hidden>
+          <label class="toggle check-line"><input type="checkbox" name="reviewed"> Я сверил условия этого оффера для своей учётной записи в Германии</label>
+        </fieldset>
+        <p class="form-error" id="offer-error" role="alert" hidden></p>
+      </div>
+      <div class="dialog-actions"><button class="button secondary" data-close type="button">Отмена</button><button class="button primary" type="submit">Сохранить оффер</button></div>
+    </form>
+  </dialog>
+  <dialog id="progress-dialog" aria-labelledby="progress-title">
+    <form id="progress-form">
+      <div class="dialog-head"><h2 id="progress-title">Записать прогресс</h2><button class="close" type="button" data-close aria-label="Закрыть">×</button></div>
+      <div class="form-body">
+        <p id="progress-step"></p>
+        <label id="progress-date">Фактическая дата установки<input name="started" type="date"></label>
+        <label id="progress-amount">Сумма по факту<input name="amount" inputmode="decimal"></label>
+        <label id="progress-currency">Полученная валюта<select name="currency" data-currency></select></label>
+        <label class="toggle check-line"><input type="checkbox" name="attested" required> Подтверждаю, что это уже произошло</label>
+        <p class="form-error" id="progress-error" role="alert" hidden></p>
+      </div>
+      <div class="dialog-actions"><button class="button secondary" data-close type="button">Отмена</button><button class="button primary" type="submit">Записать</button></div>
+    </form>
+  </dialog>
+</body>
+</html>
