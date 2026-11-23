@@ -32,19 +32,26 @@ def deliver(db, bot, recipient, snapshot, events):
         def reserve(event):
             return db.execute("INSERT OR IGNORE INTO deliveries VALUES (?,?,'pending')",
                               (owner, event)).rowcount == 1
-        if reserve("initial-scan"):
-            batch.append("initial-scan")
-        lines = ["Crypto Cash Hunter v4 · папка «Крипта»", snapshot["generated_utc"],
-                 f"Каналов проверено {counts['completed']}, сообщений {counts['messages_read']}, "
-                 f"признаки риска в {counts['suspicious']}."]
+        lines = ["Crypto Cash Hunter · награды"]
         for event, message in events:
-            if len(batch) >= 5:
-                break
+            if event.startswith("deadline:") and ("program:" + event.split(":")[1]) in batch:
+                # The first notification already includes the deadline.
+                if reserve(event):
+                    batch.append(event)
+                continue
+            if len(lines) > 5:
+                continue
             if len("\n\n".join([*lines, message]).encode("utf-16-le")) // 2 > 3800:
                 continue
             if reserve(event):
                 batch.append(event)
                 lines.append(message)
+        if reserve("initial-scan"):
+            batch.append("initial-scan")
+            if len(lines) == 1:
+                lines = ["Crypto Cash Hunter v4 · папка «Крипта»", snapshot["generated_utc"],
+                         f"Каналов проверено {counts['completed']}, сообщений {counts['messages_read']}, "
+                         f"признаки риска в {counts['suspicious']}."]
         if not batch:
             pending = db.execute("SELECT 1 FROM deliveries WHERE recipient=? AND status='pending'", (owner,)).fetchone()
             return PENDING if pending else NO_REPEAT

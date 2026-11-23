@@ -16,6 +16,9 @@ class RewardHunterTests(unittest.TestCase):
                             germany="eligible", kyc="required", fees="none", deposit="none",
                             deadline="2026-11-24", reward="conditional", payout="Bank payout",
                             steps=["Complete the lesson manually"], risks=["Limited slots"], access="public")
+        url = self.program["url"]
+        self.program["proof"] = {field: {url: ["free enrollment"]} for field in
+                                 ("access", "germany", "kyc", "fees", "deposit", "deadline", "reward", "payout", "steps")}
         self.today = dt.date(2026, 11, 22)
         self.fetch = lambda _: b"<p>Free <strong>enrollment</strong>. Rewards paid in USD.</p>"
 
@@ -39,6 +42,29 @@ class RewardHunterTests(unittest.TestCase):
                 self.program[key] = value
                 self.assertEqual(reward_hunter.events([self.inspect()], self.today), [])
                 self.program[key] = original
+
+    def test_generic_program_evidence_cannot_verify_germany_or_withdrawal(self):
+        del self.program["proof"]["germany"]
+        self.program["proof"]["payout"] = {self.program["url"]: ["payment to a bank account"]}
+        item = self.inspect()
+        self.assertEqual(item["status"], "checked")
+        self.assertNotIn("germany", item["verified_fields"])
+        self.assertNotIn("payout", item["verified_fields"])
+        self.assertEqual(reward_hunter.events([item], self.today), [])
+
+    def test_fee_deducted_only_at_cashout_can_be_eligible(self):
+        self.program.update(fees="deducted", fee_details="1% deducted at cashout")
+        item = self.inspect()
+        self.assertEqual(item["status"], "available")
+        event, text = reward_hunter.events([item], self.today)[0]
+        self.assertEqual(event, "program:example")
+        self.assertIn("1% deducted at cashout", text)
+        self.assertIn("Complete the lesson manually", text)
+        self.assertIn("2026-11-24", text)
+        self.assertIn(self.program["url"], text)
+        self.assertLess(len(text), 600)
+        self.program.pop("fee_details")
+        self.assertEqual(reward_hunter.events([self.inspect()], self.today), [])
 
     def test_alias_discovery_needs_no_link_and_keeps_only_id(self):
         self.assertEqual(reward_hunter.mentions("News: EXAMPLE learn & earn is open!", [self.program]), {"example"})
@@ -68,6 +94,26 @@ class RewardHunterTests(unittest.TestCase):
             self.assertEqual(deliver(db, bot, 111, snapshot, events), "Отправлено")
             self.assertEqual(deliver(db, bot, 111, snapshot, events), "Без повторов")
         bot.call.assert_called_once()
+        message = bot.call.call_args.args[1]["text"]
+        self.assertIn("Complete the lesson manually", message)
+        self.assertNotIn("Каналов проверено", message)
+        self.assertEqual(message.count(self.program["url"]), 1)
+
+    def test_reminder_still_sends_once_after_original_opportunity(self):
+        from unittest.mock import Mock
+
+        bot = Mock()
+        bot.call.return_value = {"message_id": 123}
+        snapshot = dict(generated_utc="now", coverage=dict(completed=4, messages_read=120, suspicious=0))
+        item = self.inspect()
+        with sqlite3.connect(":memory:") as db:
+            early = reward_hunter.events([item], self.today - dt.timedelta(days=4))
+            due = reward_hunter.events([item], self.today)
+            self.assertEqual(deliver(db, bot, 111, snapshot, early), "Отправлено")
+            self.assertEqual(deliver(db, bot, 111, snapshot, due), "Отправлено")
+            self.assertEqual(deliver(db, bot, 111, snapshot, due), "Без повторов")
+        self.assertEqual(bot.call.call_count, 2)
+        self.assertIn("Срок до 2026-11-24", bot.call.call_args.args[1]["text"])
 
     def test_bot_retries_explicit_rejection_but_not_ambiguous_timeout(self):
         from unittest.mock import Mock
