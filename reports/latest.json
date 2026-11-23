@@ -1,12 +1,12 @@
 {
-  "time_utc": "2026-11-23 07:28",
+  "time_utc": "2026-11-23 23:49",
   "market": [
     {
       "id": "bitcoin",
       "name": "Bitcoin",
       "symbol": "BTC",
-      "usd": 61413.0,
-      "change24h": 4.07351,
+      "usd": 61147.0,
+      "change24h": -0.00433,
       "source": "https://www.coingecko.com/en/coins/bitcoin",
       "news": []
     },
@@ -14,17 +14,22 @@
       "id": "ethereum",
       "name": "Ethereum",
       "symbol": "ETH",
-      "usd": 1722.75,
-      "change24h": 3.77282,
+      "usd": 1707.31,
+      "change24h": -0.68773,
       "source": "https://www.coingecko.com/en/coins/ethereum",
-      "news": []
+      "news": [
+        {
+          "title": "PQAI #0: Preparing Ethereum for a post-quantum, post-AI world",
+          "url": "https://blog.ethereum.org/en/2026/11/23/pqai-0"
+        }
+      ]
     },
     {
       "id": "solana",
       "name": "Solana",
       "symbol": "SOL",
-      "usd": 72.11,
-      "change24h": 4.32528,
+      "usd": 71.8,
+      "change24h": 1.82084,
       "source": "https://www.coingecko.com/en/coins/solana",
       "news": []
     },
@@ -32,8 +37,8 @@
       "id": "weth",
       "name": "Weth",
       "symbol": "WETH",
-      "usd": 1721.7,
-      "change24h": 3.70211,
+      "usd": 1708.18,
+      "change24h": -0.57118,
       "source": "https://www.coingecko.com/en/coins/weth",
       "news": []
     }
@@ -3810,10 +3815,10 @@
       "reasons": [
         "GoPlus · ограничение продажи неизвестно",
         "Chainabuse · не подключён для этой сети",
-        "GoPlus · крупнейшая доля в выборке 13.9% (включая контракты)",
+        "GoPlus · крупнейшая доля в выборке 13.7% (включая контракты)",
         "GoPlus · проверены доступные признаки контракта",
-        "DEX Screener · крупнейший наблюдаемый пул $71,101,634",
-        "DeFiLlama · справочная цена $1721.68"
+        "DEX Screener · крупнейший наблюдаемый пул $69,608,629",
+        "DeFiLlama · справочная цена $1704.34"
       ],
       "sources": {
         "GoPlus": "https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
