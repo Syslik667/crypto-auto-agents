@@ -8,11 +8,110 @@
       "https://help.revolut.com/de-DE/help/wealth/cryptocurrencies/learn-and-earn/what-is-crypto-learn-earn-and-where-can-i-access-it/": ["im EWR"],
       "https://help.revolut.com/en-DE/help/wealth/cryptocurrencies/transferring-cryptocurrencies/withdrawing-cryptocurrencies/crypto-withdrawal-basics/how-much-does-it-cost-to-withdraw-crypto/": ["service fee", "network fee"]
     },
+    "proof": {
+      "germany": {"https://help.revolut.com/de-DE/help/wealth/cryptocurrencies/learn-and-earn/what-is-crypto-learn-earn-and-where-can-i-access-it/": ["wird Krypto Lernen im EWR"]},
+      "reward": {"https://www.revolut.com/de-DE/legal/cryptocurrency-terms/": ["the reward will be in a cryptoasset token", "rewards are limited while funds last"]},
+      "fees": {"https://help.revolut.com/en-DE/help/wealth/cryptocurrencies/transferring-cryptocurrencies/withdrawing-cryptocurrencies/crypto-withdrawal-basics/how-much-does-it-cost-to-withdraw-crypto/": ["service fee", "network fee"]}
+    },
     "germany": "eligible", "kyc": "required", "fees": "withdrawal", "deposit": "unknown", "deadline": null,
     "access": "account", "reward": "conditional",
     "payout": "Начисление токенов на баланс Revolut. Продажа или перевод вручную зависят от актива, минимальной суммы и комиссий.",
     "steps": ["В приложении откройте Крипто → Обзор → Обучение.", "Проверьте знак награды, остаток фонда и отсутствие требования пополнить счёт для конкретного урока.", "Пройдите урок и викторину вручную. Проверьте начисление в истории."],
     "risks": ["Задание и наличие награды видны только в аккаунте.", "Минимум вывода, комиссия или требования к проверке аккаунта могут сделать участие бессмысленным."]
+  },
+  {
+    "id": "freecash-surveys", "title": "Freecash: опросы с возможностью выплаты в BTC", "category": "task",
+    "aliases": ["Freecash surveys", "Freecash Umfragen", "Freecash Earn"],
+    "url": "https://freecash.com/academy/en/support/general/platform/what-is-freecash",
+    "evidence": {
+      "https://freecash.com/academy/en/support/general/platform/what-is-freecash": ["survey respondents", "other cashout methods"],
+      "https://freecash.com/academy/de/support/surveys/qualification/why-no-surveys-available-what-to-do": ["Umfragen gibt es nicht überall"],
+      "https://freecash.com/academy/de/support/verification/id-verification/verify-without-id": ["bevor du Geld auszahlen kannst", "Deutschland"],
+      "https://freecash.com/academy/en/support/withdrawal/crypto/how-withdraw-bitcoin": ["Direct withdrawals", "You will receive Bitcoin in your wallet"],
+      "https://freecash.com/academy/de/support/withdrawal/issues/withdrawal-limits": ["siehst du das jeweilige Minimum"]
+    },
+    "proof": {
+      "kyc": {"https://freecash.com/academy/de/support/verification/id-verification/verify-without-id": ["bevor du Geld auszahlen kannst", "durchlaufen"]},
+      "reward": {"https://freecash.com/academy/en/support/general/platform/what-is-freecash": ["complete simple tasks online and earn real money", "survey respondents"]},
+      "payout": {"https://freecash.com/academy/en/support/withdrawal/crypto/how-withdraw-bitcoin": ["Direct withdrawals", "You will receive Bitcoin in your wallet"]}
+    },
+    "germany": "unknown", "kyc": "required", "fees": "unknown", "deposit": "unknown", "deadline": null,
+    "access": "account", "reward": "conditional",
+    "fee_details": "Минимум первой выплаты зависит от региона. Лимит и комиссия прямого вывода BTC видны в личном кабинете.",
+    "payout": "Официально описан прямой вывод BTC из Cashout. Наличие прямого вывода в немецком аккаунте требует проверки.",
+    "steps": ["В личном кабинете проверьте, есть ли оплачиваемый опрос без покупки, и запишите его срок и условия.", "Проверьте прямой вывод BTC, минимум первой выплаты и комиссию до выполнения задания."],
+    "risks": ["Опросы зависят от региона и профиля. Запись не охватывает платные офферы и вывод через азартные площадки.", "Для вывода нужна проверка личности."]
+  },
+  {
+    "id": "timebucks-free-tasks", "title": "TimeBucks: бесплатные задания с выплатой LTC или SOL", "category": "task",
+    "aliases": ["TimeBucks", "TimeBucks crypto payouts"],
+    "url": "https://help.timebucks.com/en/articles/12137505-what-is-timebucks",
+    "evidence": {
+      "https://help.timebucks.com/en/articles/12137505-what-is-timebucks": ["free to join and use", "members earn real cash"],
+      "https://help.timebucks.com/en/articles/10615460-how-payouts-work": ["the minimum payout", "a full ID check is required for any crypto rail"],
+      "https://help.timebucks.com/en/articles/9691378-cryptocurrency-payouts-supported-coins-and-id-verification": ["LiteCoin", "Solana", "no new BitCoin payouts are issued"]
+    },
+    "proof": {
+      "kyc": {"https://help.timebucks.com/en/articles/10615460-how-payouts-work": ["a full ID check is required for any crypto rail"]},
+      "germany": {"https://help.timebucks.com/en/articles/15618961-sanctions-checks-and-restricted-countries": ["Cryptocurrency (Litecoin and Solana) has zero country restrictions and is available globally"]},
+      "fees": {"https://help.timebucks.com/en/articles/10123545-available-payment-methods": ["LiteCoin $0.50 under $5; no fee at $5+", "Solana $0.50 under $5; no fee at $5+"]},
+      "reward": {"https://help.timebucks.com/en/articles/12137505-what-is-timebucks": ["members earn real cash for completing small online tasks"]},
+      "payout": {"https://help.timebucks.com/en/articles/9691378-cryptocurrency-payouts-supported-coins-and-id-verification": ["TimeBucks pays out in two cryptocurrencies", "no new BitCoin payouts are issued"]}
+    },
+    "germany": "eligible", "kyc": "required", "fees": "withdrawal", "deposit": "unknown", "deadline": null,
+    "access": "account", "reward": "conditional",
+    "fee_details": "По таблице выплат $0,50 при сумме ниже $5, без комиссии от $5. Проверьте условия конкретного задания и платежа.",
+    "payout": "Автоматические выплаты LTC или SOL при накопленном балансе от $3, настроенном способе и пройденном KYC.",
+    "steps": ["Проверьте, есть ли в немецком профиле оплачиваемое задание без покупки, подписки или пополнения.", "До участия сверьте срок, порог, комиссию и поддержку LTC или SOL для вашего аккаунта."],
+    "risks": ["Наполнение кабинета и награды зависят от региона и задания.", "Обзор сервиса может упоминать BTC, но специальная страница выплат указывает, что новые выплаты BTC прекращены."]
+  },
+  {
+    "id": "brave-bat-solana", "title": "Brave Rewards: выплата BAT через Solana", "category": "task",
+    "aliases": ["Brave Rewards", "Brave Ads BAT"],
+    "url": "https://brave.com/blog/payouts-on-solana/",
+    "evidence": {
+      "https://brave.com/blog/payouts-on-solana/": ["receiving BAT payouts", "you will need some SOL"],
+      "https://support.brave.app/hc/en-us/articles/41704970565261-How-do-I-connect-Brave-Rewards-to-a-self-custody-wallet": ["a small amount of SOL is required"]
+    },
+    "proof": {
+      "fees": {"https://brave.com/blog/payouts-on-solana/": ["pay the Solana network/transaction fees"]},
+      "payout": {"https://brave.com/blog/payouts-on-solana/": ["BAT payouts in Wormhole-bridged BAT, directly on-chain"]},
+      "reward": {"https://brave.com/blog/payouts-on-solana/": ["start receiving BAT payouts"]}
+    },
+    "germany": "unknown", "kyc": "unknown", "fees": "required", "deposit": "required", "deadline": null,
+    "access": "public", "reward": "conditional",
+    "fee_details": "SOL нужен заранее для создания счёта BAT и сетевой комиссии.",
+    "payout": "Brave начисляет bridged BAT в Solana после подключения.",
+    "steps": ["Сверьте требования к варианту выплаты на странице Brave. Для участия без начальных затрат отложите этот способ."],
+    "risks": ["Начальный расход в SOL. Для кастодиальных способов действуют отдельные региональные правила."]
+  },
+  {
+    "id": "brave-bat-uphold", "title": "Brave Rewards: выплата BAT через Uphold", "category": "task",
+    "aliases": ["Brave Uphold", "Brave Rewards Uphold"],
+    "url": "https://support.uphold.com/hc/en-us/articles/19131841131675-About-Brave-Rewards-BAT",
+    "evidence": {
+      "https://support.uphold.com/hc/en-us/articles/19131841131675-About-Brave-Rewards-BAT": ["get your BAT earnings sent straight to it"],
+      "https://support.uphold.com/hc/en-us/articles/360026786712-Is-my-location-supported": ["locations where we are unable to offer new accounts", "Georgia Germany Ghana"],
+      "https://uphold.com/en-eu/tap-network": ["verify your identity"]
+    },
+    "proof": {
+      "germany": {"https://support.uphold.com/hc/en-us/articles/360026786712-Is-my-location-supported": ["locations where we are unable to offer new accounts", "Georgia Germany Ghana"]}
+    },
+    "germany": "excluded", "kyc": "required", "fees": "unknown", "deposit": "unknown", "deadline": null,
+    "access": "account", "reward": "conditional",
+    "payout": "Документация программы описывает начисление BAT на аккаунт Uphold.",
+    "steps": ["Сверьте страну в таблице Uphold. Для нового немецкого аккаунта этот маршрут сейчас закрыт."],
+    "risks": ["Германия включена в список ограничений на открытие новых аккаунтов. У существующих аккаунтов также возможны ограничения."]
+  },
+  {
+    "id": "onlydust-fellowship", "title": "OnlyDust Fellowship", "category": "grant",
+    "aliases": ["OnlyDust Fellowship", "OnlyDust grant", "OnlyDust rewards"],
+    "url": "https://www.onlydust.com/",
+    "evidence": {"https://www.onlydust.com/": ["the OnlyDust chapter closes here"]},
+    "germany": "unknown", "kyc": "unknown", "fees": "unknown", "deposit": "unknown", "deadline": null,
+    "access": "closed", "reward": "none", "payout": "",
+    "steps": ["Проверьте сообщение о закрытии на сайте организатора."],
+    "risks": ["В интернете остаются старые правила выплат. Основная программа закрылась."]
   },
   {
     "id": "ethereum-esp", "title": "Ethereum Foundation Ecosystem Support Program", "category": "grant",

@@ -16,6 +16,18 @@ CATEGORIES = {
     "grant": r"grants?|грант\w*",
     "bounty": r"bug bount(?:y|ies)|баунти",
     "airdrop": r"airdrops?|а[ий]рдроп\w*|эйрдроп\w*",
+    "task": r"paid tasks?|paid surveys?",
+}
+PROOF_FIELDS = {
+    "access": "открытый приём",
+    "germany": "допуск в Германии",
+    "kyc": "KYC",
+    "fees": "комиссии и порядок удержания",
+    "deposit": "депозит",
+    "deadline": "срок",
+    "reward": "тип и наличие награды",
+    "payout": "способ получения",
+    "steps": "шаги участия",
 }
 REWARD_TYPES = {"guaranteed": "Гарантирована при выполнении опубликованных условий",
                 "conditional": "Потенциальная, зависит от условий или отбора",
@@ -54,34 +66,53 @@ def mentions(content, programs=None):
 
 def inspect(program, mentioned, today, reader=None):
     item = {**program, "telegram_mention": program["id"] in mentioned,
-            "status": "found", "checks": {}, "blockers": []}
-    for url, fragments in program["evidence"].items():
+            "status": "found", "checks": {}, "blockers": [], "verified_fields": []}
+    proof = program.get("proof", {})
+    evidence = program["evidence"]
+    groups = (evidence, *proof.values())
+    urls = dict.fromkeys(url for group in groups for url in group)
+    pages = {}
+    for url in urls:
         try:
-            if not canonical(url) or not fragments:
+            if not canonical(url):
                 raise ValueError("Official evidence required")
             page = PageText()
             raw = reader(url) if reader else fetch(url, exact_url=True)
             page.feed(raw.decode("utf-8", "replace"))
-            visible = " ".join(" ".join(page.parts).casefold().split())
-            matched = all(" ".join(fragment.casefold().split()) in visible for fragment in fragments)
-            item["checks"][url] = "OK" if matched else "Правила изменились или страница недоступна для чтения"
+            pages[url] = " ".join(" ".join(page.parts).casefold().split())
         except (HTTPError, OSError, RuntimeError, ValueError) as exc:
             item["checks"][url] = failure(exc)
-    if not item["checks"] or any(value != "OK" for value in item["checks"].values()):
+
+    def supports(url, fragments):
+        return bool(
+            pages.get(url) and fragments
+            and all(fragment.strip() and " ".join(fragment.casefold().split()) in pages[url] for fragment in fragments)
+        )
+
+    for url in pages:
+        fragments = [part for group in groups for part in group.get(url, ())]
+        item["checks"][url] = "OK" if supports(url, fragments) else "Не найдено одно или несколько условий"
+    item["verified_fields"] = [field for field in PROOF_FIELDS if proof.get(field)
+                               and all(supports(url, markers) for url, markers in proof[field].items())]
+    if not evidence or not all(supports(url, markers) for url, markers in evidence.items()):
         item["blockers"].append("Текущие правила не подтверждены")
-        return item
-    item["status"] = "checked"
+    else:
+        item["status"] = "checked"
+    missing = [label for field, label in PROOF_FIELDS.items() if field not in item["verified_fields"]]
+    if missing:
+        item["blockers"].append("Недостаточно подтверждений из первоисточника: " + ", ".join(missing))
     deadline = program["deadline"]
     if deadline != "rolling" and (not deadline or dt.date.fromisoformat(deadline) < today):
         item["blockers"].append("Срок истёк или требует проверки")
     for field, expected, message in (
         ("germany", "eligible", "Допуск для Германии требует проверки"),
         ("deposit", "none", "Отсутствие обязательного депозита не подтверждено"),
-        ("fees", "none", "Возможны расходы до получения награды"),
         ("access", "public", "Доступ к конкретному заданию нужно проверить у организатора"),
     ):
         if program[field] != expected:
             item["blockers"].append(message)
+    if program["fees"] != "none" and not (program["fees"] == "deducted" and program.get("fee_details", "").strip()):
+        item["blockers"].append("Не подтверждено, что участвовать можно без авансовых комиссий")
     if program["kyc"] not in {"none", "required"}:
         item["blockers"].append("Требования KYC неизвестны")
     if program["reward"] not in {"guaranteed", "conditional"} or not program["payout"]:
@@ -127,14 +158,17 @@ def events(items, today):
     for item in items:
         if item["status"] != "available":
             continue
+        end = item["deadline"]
+        deadline = end if end != "rolling" else "постоянная программа"
+        kyc = "нужен" if item["kyc"] == "required" else "не нужен"
+        fee = item["fee_details"] if item["fees"] == "deducted" else "нет"
         text = (f"{item['title']} · {REWARD_TYPES[item['reward']]}\n"
                 f"{item['url']}\n"
-                f"Германия: допуск указан. Депозит и авансовые комиссии: отсутствуют. "
-                f"KYC: {'требуется' if item['kyc'] == 'required' else 'не указан как обязательный'}.\n"
-                + "\n".join(f"{i}. {step}" for i, step in enumerate(item["steps"], 1))
-                + f"\nПолучение: {item['payout']}\nРиски: {'; '.join(item['risks'])}")
+                f"Германия · без депозита · KYC {kyc} · срок {deadline}\n"
+                f"Комиссия: {fee}\n"
+                + "\n".join(f"{i}. {step}" for i, step in enumerate(item["steps"][:2], 1))
+                + f"\nВыплата: {item['payout']}")
         result.append(("program:" + item["id"], text))
-        end = item["deadline"]
         if end != "rolling" and 0 <= (dt.date.fromisoformat(end) - today).days <= 3:
             result.append((f"deadline:{item['id']}:{end}",
                            f"Срок до {end} · {item['title']}\n{item['url']}"))
@@ -145,27 +179,37 @@ def markdown(report):
     from .reports import md, md_link
 
     labels = {"learn": "Learn & Earn", "testnet": "Тестовая сеть", "quest": "Квест",
-              "grant": "Грант", "bounty": "Bug bounty", "airdrop": "Аирдроп"}
+              "grant": "Грант", "bounty": "Bug bounty", "airdrop": "Аирдроп", "task": "Задания с оплатой"}
     stages = {"found": "найдено", "checked": "проверено", "available": "доступно",
               "submitted": "заявка подана", "confirmed": "награда подтверждена", "received": "реально получено"}
-    terms = {"unknown": "требует проверки", "none": "отсутствует", "required": "требуется",
-             "eligible": "допуск указан", "withdrawal": "при выводе"}
+    terms = {"unknown": "требует проверки", "none": "отсутствует", "required": "требуется", "excluded": "ограничена",
+             "eligible": "допуск указан", "withdrawal": "при выводе", "deducted": "удерживается из выплаты"}
     progress = report["progress"]
     lines = ["# Crypto Cash Hunter v4", "", f"Проверка {report['checked_utc']}",
              f"Фактически получено {progress['real_earnings_usd']} USD.",
              " · ".join(f"{stages[k]} {v}" for k, v in progress["stages"].items())]
+    order = {"available": 0, "checked": 1, "found": 2}
     for item in sorted([*report["programs"], *report["leads"]],
-                       key=lambda p: (list(stages).index(p["status"]) * -1, p["id"])):
+                       key=lambda p: (order[p["status"]], -len(p.get("verified_fields", ())), p["id"])):
+        verified = set(item.get("verified_fields", ()))
+        deadline = "действует постоянно" if item["deadline"] == "rolling" else item["deadline"]
         lines += ["", "## " + md_link(item["title"], item["url"]), "",
-                  f"{labels[item['category']]} · {stages[item['status']]} · ID `{item['id']}`", "",
-                  f"- Германия — {terms[item['germany']]}",
-                  f"- KYC — {terms[item['kyc']]}",
-                  f"- Комиссия — {terms[item['fees']]}",
-                  f"- Депозит — {terms[item['deposit']]}",
-                  "- Срок — " + ("действует постоянно" if item["deadline"] == "rolling" else item["deadline"] or "требует проверки"),
-                  "- Награда — " + REWARD_TYPES[item["reward"]],
-                  "- Получение — " + md(item["payout"] or "требует проверки"),
-                  "- Риски — " + md(". ".join(item["risks"])),
+                  f"{labels[item['category']]} · {stages[item['status']]} · ID `{item['id']}`", ""]
+        for field, label, value in (
+            ("germany", "Германия", terms[item["germany"]]),
+            ("kyc", "KYC", terms[item["kyc"]]),
+            ("fees", "Комиссия", terms[item["fees"]] + (". " + item["fee_details"] if item.get("fee_details") else "")),
+            ("deposit", "Депозит", terms[item["deposit"]]),
+            ("deadline", "Срок", deadline),
+            ("reward", "Награда", REWARD_TYPES[item["reward"]]),
+            ("payout", "Получение", item["payout"]),
+        ):
+            suffix = " · сверено" if field in verified else " · не сверено в этом проходе"
+            if not value or value == terms["unknown"]:
+                lines.append(f"- {label} — требуется проверка")
+            else:
+                lines.append(f"- {label} — {md(value)}{suffix}")
+        lines += ["- Риски — " + md(". ".join(item["risks"])),
                   "- Упоминание в папке «Крипта» — " + ("есть" if item["telegram_mention"] else "отсутствует")]
         lines += ["- Проверка — " + md(reason) for reason in item["blockers"]]
         for url, outcome in item["checks"].items():
