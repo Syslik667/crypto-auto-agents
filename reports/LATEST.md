@@ -1,10 +1,13 @@
 # Crypto Cash Hunter v3
 
-**2026-11-23 23:49 UTC** · Бюджет €0 · Заработано $0
+**2026-11-24 09:48 UTC** · Бюджет €0 · Заработано $0
 
 ## TOP-5 новых возможностей
 
-Новых публикаций, прошедших отбор, в этой проверке нет.
+- **[Florin Protocol Testnet](<https://airdropalert.com/airdrops/florin-protocol-testnet>)** — AirdropAlert (каталог, НЕ подтверждение)
+  - Участие — не указано · Депозит — не указано · Комиссии — не указано · KYC — не указано · Германия — не указано · Вывод — не указано · Окончание — 2026-12-13 · Награда — points · денежная сумма не установлена
+  - Недостаточно данных · В первоисточнике не установлена пара сеть/адрес
+  - Отбор — публикация каталога, первоисточник не подтверждён
 
 Частичные данные — Coinbase (официальный блог).
 
@@ -12,7 +15,7 @@
 
 ## Рынок за 24 часа
 
-[BTC](<https://www.coingecko.com/en/coins/bitcoin>) $61,147 (-0.00%) · [ETH](<https://www.coingecko.com/en/coins/ethereum>) $1,707.31 (-0.69%) · [SOL](<https://www.coingecko.com/en/coins/solana>) $71.8 (+1.82%) · [WETH](<https://www.coingecko.com/en/coins/weth>) $1,708.18 (-0.57%)
+[BTC](<https://www.coingecko.com/en/coins/bitcoin>) $60,034 (-2.23%) · [ETH](<https://www.coingecko.com/en/coins/ethereum>) $1,687.33 (-2.02%) · [SOL](<https://www.coingecko.com/en/coins/solana>) $70.82 (-1.87%) · [WETH](<https://www.coingecko.com/en/coins/weth>) $1,688.35 (-1.95%)
 
-Новых публикаций 0, всего проверено возможностей 53.
+Новых публикаций 3, всего проверено возможностей 53.
 Доступность источников, все находки и оценки контрактов — [HTML](LATEST.html) · [JSON](latest.json).
