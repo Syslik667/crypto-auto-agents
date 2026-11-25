@@ -1,17 +1,21 @@
 {
-  "time_utc": "2026-11-25 08:24",
+  "time_utc": "2026-11-25 21:37",
   "market": [
     {
       "id": "bitcoin",
       "name": "Bitcoin",
       "symbol": "BTC",
-      "usd": 58853.0,
-      "change24h": -2.3329,
+      "usd": 60282.0,
+      "change24h": 0.6479,
       "source": "https://www.coingecko.com/en/coins/bitcoin",
       "news": [
         {
           "title": "Meet the new Krak Credit Card: up to 4% cashback on all purchases¹",
           "url": "https://blog.kraken.com/product/krak/credit-card-up-to-4-cashback-on-all-purchases"
+        },
+        {
+          "title": "Bitcoin’s Recovery Remains Elusive",
+          "url": "https://blog.bitfinex.com/bitfinex-alpha/bitcoins-recovery-remains-elusive"
         }
       ]
     },
@@ -19,10 +23,14 @@
       "id": "ethereum",
       "name": "Ethereum",
       "symbol": "ETH",
-      "usd": 1639.12,
-      "change24h": -3.31517,
+      "usd": 1688.82,
+      "change24h": 0.56042,
       "source": "https://www.coingecko.com/en/coins/ethereum",
       "news": [
+        {
+          "title": "Devcon 8 India Recap: Four Days in Mumbai, and What's Next",
+          "url": "https://blog.ethereum.org/en/2026/11/25/devcon-mumbai-wrap"
+        },
         {
           "title": "PQAI #1: One hash to rule them all — Keccak-256 for Ethereum's post-quantum, post-AI era",
           "url": "https://blog.ethereum.org/en/2026/11/24/pqai-1"
@@ -33,8 +41,8 @@
       "id": "solana",
       "name": "Solana",
       "symbol": "SOL",
-      "usd": 67.76,
-      "change24h": -5.18312,
+      "usd": 70.74,
+      "change24h": 1.82226,
       "source": "https://www.coingecko.com/en/coins/solana",
       "news": []
     },
@@ -42,82 +50,13 @@
       "id": "weth",
       "name": "Weth",
       "symbol": "WETH",
-      "usd": 1639.1,
-      "change24h": -3.37381,
+      "usd": 1689.25,
+      "change24h": 0.61376,
       "source": "https://www.coingecko.com/en/coins/weth",
       "news": []
     }
   ],
-  "new": [
-    {
-      "id": "b16eb6833a4fb0fab4",
-      "title": "RocX Airdrop",
-      "source": "AirdropAlert (каталог, НЕ подтверждение)",
-      "url": "https://airdropalert.com/airdrops/rocx-testnet",
-      "official": false,
-      "published": "2026-11-24",
-      "terms": {
-        "Участие": "не указано",
-        "Депозит": "не указано",
-        "Комиссии": "не указано",
-        "KYC": "не указано",
-        "Германия": "не указано",
-        "Вывод": "ограничен",
-        "Окончание": "не указано",
-        "Награда": "points · денежная сумма не установлена"
-      },
-      "token": null,
-      "sources": {
-        "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/rocx-testnet"
-      },
-      "mentions": [],
-      "status": "Возможны платные условия",
-      "exclusions": [
-        "Вывод — ограничен"
-      ],
-      "expired": false,
-      "risk": {
-        "status": "Недостаточно данных",
-        "reasons": [
-          "В первоисточнике не установлена пара сеть/адрес",
-          "Условия акции и ссылки для получения награды требуют ручной проверки"
-        ],
-        "sources": {
-          "AirdropAlert (каталог, НЕ подтверждение)": "https://airdropalert.com/airdrops/rocx-testnet"
-        }
-      },
-      "summary": "Вывод — ограничен. Награда — points · денежная сумма не установлена",
-      "selection": "публикация каталога, первоисточник не подтверждён, указано условий 1 из 6",
-      "eligible": false,
-      "score": 1,
-      "guide": {
-        "source": "https://airdropalert.com/airdrops/rocx-testnet",
-        "blockers": [
-          "Вывод — ограничен",
-          "Найдите подтверждение акции на официальном сайте проекта",
-          "Завершите проверку риска по указанным источникам",
-          "Уточните условие «Германия»",
-          "Уточните условие «Депозит»",
-          "Уточните условие «Комиссии»",
-          "Уточните условие «KYC»",
-          "Уточните условие «Окончание»"
-        ],
-        "steps": [
-          "Пропустите участие по текущим условиям.",
-          "Вывод — ограничен",
-          "Найдите подтверждение акции на официальном сайте проекта",
-          "Завершите проверку риска по указанным источникам",
-          "Уточните условие «Германия»",
-          "Уточните условие «Депозит»",
-          "Уточните условие «Комиссии»",
-          "Уточните условие «KYC»",
-          "Уточните условие «Окончание»"
-        ],
-        "reward": "points · денежная сумма не установлена",
-        "withdrawal": "ограничен"
-      }
-    }
-  ],
+  "new": [],
   "latest": [
     {
       "id": "59b5220454a342b8c7",
@@ -3818,8 +3757,8 @@
         "Chainabuse · не подключён для этой сети",
         "GoPlus · крупнейшая доля в выборке 13.6% (включая контракты)",
         "GoPlus · проверены доступные признаки контракта",
-        "DEX Screener · крупнейший наблюдаемый пул $67,367,160",
-        "DeFiLlama · справочная цена $1638.48"
+        "DEX Screener · крупнейший наблюдаемый пул $68,721,967",
+        "DeFiLlama · справочная цена $1687.87"
       ],
       "sources": {
         "GoPlus": "https://api.gopluslabs.io/api/v1/token_security/1?contract_addresses=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2",
