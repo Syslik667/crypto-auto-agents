@@ -1,11 +1,11 @@
 # Crypto Cash Hunter v3
 
-**2026-11-26 08:09 UTC** · Бюджет €0 · Заработано $0
+**2026-11-26 21:26 UTC** · Бюджет €0 · Заработано $0
 
 ## TOP-5 новых возможностей
 
-- **[Remix Gaming Rewards](<https://airdropalert.com/airdrops/remix-gaming-rewards>)** — AirdropAlert (каталог, НЕ подтверждение)
-  - Участие — не указано · Депозит — не указано · Комиссии — не указано · KYC — не указано · Германия — не указано · Вывод — не указано · Окончание — не указано · Награда — points / xp · денежная сумма не установлена
+- **[VEARL Airdrop](<https://airdropalert.com/airdrops/vearl-mining-testnet>)** — AirdropAlert (каталог, НЕ подтверждение)
+  - Участие — не указано · Депозит — не указано · Комиссии — не указано · KYC — не указано · Германия — не указано · Вывод — не указано · Окончание — не указано · Награда — points · денежная сумма не установлена
   - Недостаточно данных · В первоисточнике не установлена пара сеть/адрес
   - Отбор — публикация каталога, первоисточник не подтверждён
 
@@ -15,7 +15,7 @@
 
 ## Рынок за 24 часа
 
-[BTC](<https://www.coingecko.com/en/coins/bitcoin>) $60,584 (+3.06%) · [ETH](<https://www.coingecko.com/en/coins/ethereum>) $1,689.58 (+3.08%) · [SOL](<https://www.coingecko.com/en/coins/solana>) $70.91 (+4.61%) · [WETH](<https://www.coingecko.com/en/coins/weth>) $1,687.42 (+2.92%)
+[BTC](<https://www.coingecko.com/en/coins/bitcoin>) $60,782 (+0.91%) · [ETH](<https://www.coingecko.com/en/coins/ethereum>) $1,702.78 (+0.89%) · [SOL](<https://www.coingecko.com/en/coins/solana>) $71.43 (+1.20%) · [WETH](<https://www.coingecko.com/en/coins/weth>) $1,702.82 (+0.96%)
 
 Новых публикаций 2, всего проверено возможностей 52.
 Доступность источников, все находки и оценки контрактов — [HTML](LATEST.html) · [JSON](latest.json).
